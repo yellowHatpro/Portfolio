@@ -12,7 +12,7 @@ z-index: 3;
 `
 const LogoComponent = () => {
   return (
-    <Logo>Ashu</Logo>
+    <Logo>yellowHatPro</Logo>
   )
 }
 
