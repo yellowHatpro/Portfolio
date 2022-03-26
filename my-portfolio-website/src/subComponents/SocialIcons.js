@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Facebook, Github, Twitter } from '../components/AllSvgs'
 import styled from 'styled-components'
+import { DarkTheme } from '../components/Themes'
+
 
 const Icons = styled.div`
 display: flex;
@@ -24,22 +26,22 @@ height: 8rem;
 background-color: ${props => props.theme.text};
 `
 
-const SocialIcons = () => {
+const SocialIcons = (props) => {
   return (
     <Icons>
         <div>
         <NavLink style={{color:"inherit"}} target="_blank" to={{pathname:"https://github.com/yellowhatpro"}}>
-            <Github width={25} height={25} fill='currentColor'/>
+            <Github width={25} height={25} fill={props.theme==="dark"? DarkTheme.text : DarkTheme.body}/>
         </NavLink>
         </div>
         <div>
         <NavLink style={{color:"inherit"}} target="_blank" to={{pathname:"https://twitter.com/AshuAswal7"}}>
-            <Twitter width={25} height={25} fill='currentColor'/>
+            <Twitter width={25} height={25} fill={props.theme==="dark"? DarkTheme.text : DarkTheme.body}/>
         </NavLink>
         </div>
         <div>
         <NavLink style={{color:"inherit"}} target="_blank" to={{pathname:"https://github.com/yellowhatpro"}}>
-            <Facebook width={25} height={25} fill='currentColor'/>
+            <Facebook width={25} height={25} fill={props.theme==="dark"? DarkTheme.text : DarkTheme.body}/>
         </NavLink>
         </div>
         <Line/>
