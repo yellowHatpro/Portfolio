@@ -1,16 +1,11 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <div className="App-header">a
-      </div>
-      <div className="App-body">
-        b
-      </div>
-      <div className="App-footer">c
-      </div>
+      <Navbar />
     </div>
   );
 }
