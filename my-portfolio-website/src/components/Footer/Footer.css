@@ -1,0 +1,26 @@
+.footer{
+    background-color: #78aeff;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    position:fixed;
+}
+
+.footer-items{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+.fab{
+    margin-top: 10px;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-left: 50px;
+    color: aliceblue;
+}
+
+.fab:hover{
+    cursor: pointer;
+    color: #2d71a8;
+}
