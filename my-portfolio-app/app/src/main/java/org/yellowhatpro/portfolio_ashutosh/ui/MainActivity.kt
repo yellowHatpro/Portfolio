@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.yellowhatpro.portfolio_ashutosh.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 class MainActivity : ComponentActivity() {
@@ -60,7 +61,7 @@ class MainActivity : ComponentActivity() {
                                     mutableStateOf(false)
                                 }
                                Row(horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
-                                   Text(text = "Ashutosh Aswal", color = Color.DarkGray, fontWeight = FontWeight.Bold, fontSize = 20.sp )
+                                   Text(text = getString(R.string.ashutosh_aswal), color = Color.DarkGray, fontWeight = FontWeight.Bold, fontSize = 20.sp )
                                    Icon(
                                        imageVector = if (!dropDownName) Icons.Rounded.KeyboardArrowDown else Icons.Rounded.KeyboardArrowUp,
                                        contentDescription = "",
@@ -76,9 +77,9 @@ class MainActivity : ComponentActivity() {
                                }
                                 AnimatedVisibility (dropDownName){
                                    Column {
-                                       Text(text = "Open Source Contributor", fontSize = 15.sp, color = Color.DarkGray)
+                                       Text(text = getString(R.string.open_source_contributor), fontSize = 15.sp, color = Color.DarkGray)
                                        Spacer(modifier =Modifier.height(10.dp))
-                                       Text(text = "Android Developer", fontSize = 15.sp, color = Color.DarkGray)
+                                       Text(text = getString(R.string.android_developer), fontSize = 15.sp, color = Color.DarkGray)
                                    }
                                 }
 
