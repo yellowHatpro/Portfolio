@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.KeyboardArrowUp
+import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -24,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import org.yellowhatpro.portfolio_ashutosh.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -39,6 +41,7 @@ class MainActivity : ComponentActivity() {
                         .fillMaxWidth()
                         .padding(paddingValues),
                     horizontalAlignment = Alignment.CenterHorizontally){
+                 
                         Card(
                             Modifier
                                 .fillMaxWidth(0.95f)
