@@ -16,6 +16,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,9 +30,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent{
-            var dropDownName by remember {
-                mutableStateOf(false)
-            }
             var cardHeight by remember {
                 mutableStateOf(90)
             }
@@ -58,6 +56,9 @@ class MainActivity : ComponentActivity() {
                                             durationMillis = 2000
                                         )
                                     )) {
+                                var dropDownName by rememberSaveable {
+                                    mutableStateOf(false)
+                                }
                                Row(horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
                                    Text(text = "Ashutosh Aswal", color = Color.DarkGray, fontWeight = FontWeight.Bold, fontSize = 20.sp )
                                    Icon(
