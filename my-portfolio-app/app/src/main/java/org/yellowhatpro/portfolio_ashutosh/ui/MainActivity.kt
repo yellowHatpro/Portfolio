@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.KeyboardArrowUp
-import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -27,70 +26,89 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import org.yellowhatpro.portfolio_ashutosh.R
+import org.yellowhatpro.portfolio_ashutosh.ui.components.HiLottie
 
 @OptIn(ExperimentalMaterial3Api::class)
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent{
+        setContent {
             var cardHeight by remember {
                 mutableStateOf(90)
             }
-            Scaffold(modifier = Modifier.fillMaxSize()) { paddingValues->
-                    Column(modifier= Modifier
+            Scaffold(modifier = Modifier.fillMaxSize()) { paddingValues ->
+                Column(
+                    modifier = Modifier
                         .fillMaxWidth()
                         .padding(paddingValues),
-                    horizontalAlignment = Alignment.CenterHorizontally){
-                 
-                        Card(
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    HiLottie()
+                    Card(
+                        Modifier
+                            .fillMaxWidth(0.95f)
+                            .height(cardHeight.dp)
+                            .padding(top = 10.dp)
+                            .animateContentSize(
+                                animationSpec = tween(
+                                    durationMillis = 2000
+                                )
+                            )
+                    ) {
+                        Column(
                             Modifier
-                                .fillMaxWidth(0.95f)
-                                .height(cardHeight.dp)
-                                .padding(top = 10.dp)
+                                .padding(15.dp)
                                 .animateContentSize(
                                     animationSpec = tween(
                                         durationMillis = 2000
                                     )
-                                )) {
-                            Column(
-                                Modifier
-                                    .padding(15.dp)
-                                    .animateContentSize(
-                                        animationSpec = tween(
-                                            durationMillis = 2000
-                                        )
-                                    )) {
-                                var dropDownName by rememberSaveable {
-                                    mutableStateOf(false)
+                                )
+                        ) {
+                            var dropDownName by rememberSaveable {
+                                mutableStateOf(false)
+                            }
+                            Row(
+                                horizontalArrangement = Arrangement.SpaceEvenly,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = getString(R.string.ashutosh_aswal),
+                                    color = Color.DarkGray,
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 20.sp
+                                )
+                                Icon(
+                                    imageVector = if (!dropDownName) Icons.Rounded.KeyboardArrowDown else Icons.Rounded.KeyboardArrowUp,
+                                    contentDescription = "",
+                                    Modifier.clickable {
+                                        dropDownName = !dropDownName
+                                        if (dropDownName) {
+                                            cardHeight += 50
+                                        } else {
+                                            cardHeight -= 50
+                                        }
+                                    }
+                                )
+                            }
+                            AnimatedVisibility(dropDownName) {
+                                Column {
+                                    Text(
+                                        text = getString(R.string.open_source_contributor),
+                                        fontSize = 15.sp,
+                                        color = Color.DarkGray
+                                    )
+                                    Spacer(modifier = Modifier.height(10.dp))
+                                    Text(
+                                        text = getString(R.string.android_developer),
+                                        fontSize = 15.sp,
+                                        color = Color.DarkGray
+                                    )
                                 }
-                               Row(horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
-                                   Text(text = getString(R.string.ashutosh_aswal), color = Color.DarkGray, fontWeight = FontWeight.Bold, fontSize = 20.sp )
-                                   Icon(
-                                       imageVector = if (!dropDownName) Icons.Rounded.KeyboardArrowDown else Icons.Rounded.KeyboardArrowUp,
-                                       contentDescription = "",
-                                       Modifier.clickable {
-                                           dropDownName = !dropDownName
-                                           if (dropDownName){
-                                               cardHeight+=50
-                                           }else {
-                                               cardHeight-=50
-                                           }
-                                       }
-                                   )
-                               }
-                                AnimatedVisibility (dropDownName){
-                                   Column {
-                                       Text(text = getString(R.string.open_source_contributor), fontSize = 15.sp, color = Color.DarkGray)
-                                       Spacer(modifier =Modifier.height(10.dp))
-                                       Text(text = getString(R.string.android_developer), fontSize = 15.sp, color = Color.DarkGray)
-                                   }
-                                }
-
                             }
                         }
                     }
+                }
             }
         }
-
     }
 }
