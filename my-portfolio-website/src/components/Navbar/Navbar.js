@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { MenuItems } from "./MenuItems";
 import { useState } from "react";
 import "./Navbar.css";
@@ -9,7 +9,7 @@ export const Navbar = () => {
   const handleClick = () => {
     stateHandler((prev) => !prev);
   };
-  const [navBarOpen, setNavbarOpen] = useState(false);
+  const [] = useState(false);
 
   return (
     <nav className="NavbarItems">

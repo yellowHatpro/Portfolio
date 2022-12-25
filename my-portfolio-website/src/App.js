@@ -10,8 +10,7 @@ import ContactMe from "./components/Contact/ContactMe";
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 
 function App() {
