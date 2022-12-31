@@ -7,6 +7,7 @@ export const Navbar = () => {
  
   return (
     <nav>
+      <div className="navbar">
       <h1 className="navbar-items-logo">yellowHatpro</h1>
       <ul className="navbar-items">
         {MenuItems.map((item, index) => {
@@ -21,6 +22,7 @@ export const Navbar = () => {
           );
         })}
       </ul>
+      </div>
     </nav>
   );
 };

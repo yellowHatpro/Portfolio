@@ -1,0 +1,22 @@
+.home{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    height: 100vh;
+    background: #002021;
+    
+}
+
+.intro{
+color: #a8eff0;
+width: 50%;
+}
+
+.intro-my-name{
+    font-size: xxx-large;
+}
+
+.intro-my-description{
+    font-weight: 550;
+    font-size: large;
+}

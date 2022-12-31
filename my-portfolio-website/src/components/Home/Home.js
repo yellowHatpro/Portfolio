@@ -1,10 +1,12 @@
 import React from 'react';
+import './Home.css';
 
 function Home(){
-    return <h1>
-        <div className="home">
-            Adiods
+    return <div className='home'>
+        <div className="intro">
+                <h1 className='intro-my-name'>Hi there <br/> I am Ashutosh Aswal.</h1>
+                <p className='intro-my-description'>An Open Source contributor, experienced in Android Development, with a hunger to learn and explore different technologies.</p>
             </div>
-    </h1>
+    </div>
 }
 export default Home;

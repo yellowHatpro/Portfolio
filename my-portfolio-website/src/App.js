@@ -18,7 +18,6 @@ function App() {
    <Router>
      <div className="App">
       <Navbar />
-      <Footer />
 
     </div>
       <Routes>
@@ -31,6 +30,7 @@ function App() {
           <Route exact path='/contact_me' 
           element={< ContactMe />}></Route>
     </Routes>
+    <Footer />
    </Router>
   );
 }

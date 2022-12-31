@@ -6,7 +6,7 @@ import './Projects.css'
 function Projects() {
   return (
     <div className="projectCards">
-     { ProjectItems.map((item, index) => {
+     { ProjectItems.map((item) => {
         return (
           <DisplayCard name={item.name} desc={item.desc} link={item.link} tools = {item.tools} />
         )
