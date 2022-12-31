@@ -1,38 +1,30 @@
-.NavbarItems {
+nav {
     background: linear-gradient(to right, #84adea 0%, #7ba1da 100%);
+    display: flex;
     height: 80px;
-    width: 100%;
-    display: flexbox;
-    justify-content: start;
-
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    top:0;
-    background-color: red;
 }
 
 .navbar-items{
     display: flex;
-    justify-content: start;
+    align-items: center;
     height: 80px;
-    z-index: 1;
     list-style: none;
-    width: 100%;
     padding: 0 24px;
-    max-width: 1100px;
-    
+    text-decoration: none;
 }
 
 .navbar-items-logo{
     color: #fff;
-    justify-self: start;
     margin-left: 20px;
     cursor: pointer;
 }
 
 .navbar-items-links{
-    color: white;
-    text-decoration: none;
+
+    color: aliceblue;
     padding: 0.5rem 1rem;
 }
 

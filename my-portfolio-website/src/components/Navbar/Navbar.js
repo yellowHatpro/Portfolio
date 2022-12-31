@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 export const Navbar = () => {
  
   return (
-    <nav className="NavbarItems">
+    <nav>
       <h1 className="navbar-items-logo">yellowHatpro</h1>
       <ul className="navbar-items">
         {MenuItems.map((item, index) => {

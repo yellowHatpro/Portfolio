@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
   align-items: flex-start;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -9,7 +10,6 @@
   padding: 20px;
   width: 400px;
   height: 250px;
-  background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -17,6 +17,17 @@
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  /*Glass Effect*/
+  /*1. The alpha value controls the transparency*/
+  background: rgba(191, 217, 243, 0.3);
+
+  /*2. Adding the shadow*/
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+
+  /*3. Adding our borders*/
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
 }
 
 .cardTitle {
