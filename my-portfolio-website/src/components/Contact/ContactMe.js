@@ -1,8 +1,14 @@
 import React from 'react'
+import './ContactMe.css'
 
 function ContactMe() {
   return (
-    <div>ContactMe</div>
+    <div className='contact_me'>
+      <div className="linktree">
+        
+      </div>
+
+    </div>
   )
 }
 

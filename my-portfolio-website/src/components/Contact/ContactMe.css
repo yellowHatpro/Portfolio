@@ -1,0 +1,28 @@
+.contact_me{
+    height: 100vh;
+}
+
+.linktree{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin: 25px;
+    height: 95%;
+    padding: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    /*Glass Effect*/
+    /*1. The alpha value controls the transparency*/
+    background: rgba(32, 33, 255,0.3);
+
+    /*2. Adding the shadow*/
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+
+    /*3. Adding our borders*/
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
