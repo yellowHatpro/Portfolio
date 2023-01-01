@@ -1,15 +1,18 @@
 .contact_me{
     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ background-color: aquamarine; 
 }
 
 .linktree{
+    align-self: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     border-radius: 20px;
     margin: 25px;
-    height: 95%;
-    padding: 20px;
+    height: 80%;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -24,5 +27,83 @@
     /*3. Adding our borders*/
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
+.contact-items{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-items>*{
+    min-width: 200px;
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+     /*Glass Effect*/
+    /*1. The alpha value controls the transparency*/
+    background: rgba(32, 33, 255,0.3);
+
+    /*2. Adding the shadow*/
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+
+    /*3. Adding our borders*/
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    list-style: none;
+}
+
+.contact-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    height: 100%;
+}
+
+
+.contact-icon{
+    font-size: 4rem;
+    color: white;
+    margin: 10px;
+}
+
+.contact-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+.contact-heading{
+    color: #4f8dea;
+    width: 80%;
+    display: flex;
+    font-weight: 800;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+      /*Glass Effect*/
+  /*1. The alpha value controls the transparency*/
+  background: rgba(255, 255, 255, 0.2);
+
+  /*2. Adding the shadow*/
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+
+  /*3. Adding our borders*/
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.heading-box{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
