@@ -1,6 +1,5 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
  function AboutCarousel() {
     return (
@@ -8,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
         <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src='../public/images/github-logo.png'
+            className=""
+            src='https://cdn.iconscout.com/icon/free/png-512/github-1521488-1288230.png?w=256&f=avif'
             alt="Github"
           />
           <Carousel.Caption>
@@ -19,8 +18,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png'
+            className=""
+            src='https://cdn.iconscout.com/icon/free/png-512/code-forces-3629285-3031869.png?w=256&f=avif'
             alt="Codeforces"
           />
       
@@ -31,14 +30,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src='https://leetcode.com/static/images/LeetCode_logo_rvs.png'
+            className=""
+            src='https://cdn.iconscout.com/icon/free/png-512/leetcode-3772786-3146919.png?w=256&f=avif'
             alt="Leetcoding"
           />
       
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3>DS and Algorithms</h3>
+            <p>Currently learning Data Structures and Algorithms.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
