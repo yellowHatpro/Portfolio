@@ -1,5 +1,6 @@
 import React from 'react'
 import './About.css'
+import AboutCarousel from '../Carousel/Carousel'
 
 function About() {
   return (
@@ -8,12 +9,8 @@ function About() {
     >
       <div className="about-me">
         <div className="heading"> ABOUT ME </div>
-        <div className="about-me-content"> 
-        <div className="about-github">Github</div>
-        <div className="about-codeforces">codeforces</div>
-        <div className="about-leetcode">Leetcode</div>
-        </div>
-        </div>
+       <AboutCarousel/>
+      </div>
 
         
         <div className="about-xp">

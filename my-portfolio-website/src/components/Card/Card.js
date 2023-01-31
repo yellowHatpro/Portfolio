@@ -10,7 +10,6 @@ function DisplayCard(type) {
     <Card.Title className='cardTitle'>{type.name}</Card.Title>
     <Card.Subtitle>{type.desc}</Card.Subtitle>
     <Card.Link href={`${type.link}`}>Github Page</Card.Link>
-    {console.log(type)}
     <div className = 'toolset'>
  {   type.tools.map((item) => {
         return (
