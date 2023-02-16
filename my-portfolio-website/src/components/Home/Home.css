@@ -6,10 +6,61 @@
     background: #002021;
 }
 
-.intro{
-color: #a8eff0;
-width: 50%;
+@media only screen and (max-width: 800px){
+    .home{
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .intro{
+        flex-direction: row;
+        color: #a8eff0;
+        width: 100%;
+        }
+        .ashutosh-pic{
+            width: 20rem;
+            height: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+        }
 }
+
+@media only screen and (min-width: 800px) {
+    .home{
+        flex-direction: row;
+    }
+    .intro{
+        flex-direction: row;
+        color: #a8eff0;
+        width: 60%;
+        margin: 2px;
+        }
+        .ashutosh-pic-container{
+            display: flex;
+            margin: 0 auto;
+        }
+        .ashutosh-pic{
+            width: 24rem;
+            height: 30rem;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin: 0 auto;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+        }
+    }
+
 
 .intro-my-name{
     font-size: xxx-large;
@@ -20,7 +71,3 @@ width: 50%;
     font-size: large;
 }
 
-.lottie{
-    margin: 0px;
-    width: 50%;
-}

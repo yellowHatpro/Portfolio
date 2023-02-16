@@ -9,10 +9,10 @@ import org.yellowhatpro.portfolio_ashutosh.R
 
 @Composable
 fun HiLottie() {
-    var isLottiePlaying by remember {
+    val isLottiePlaying by remember {
         mutableStateOf(true)
     }
-    var animationSpeed by remember {
+    val animationSpeed by remember {
         mutableStateOf(1F)
     }
     val animationSpec by rememberLottieComposition(spec =
