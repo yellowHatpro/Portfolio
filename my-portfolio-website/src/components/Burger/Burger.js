@@ -17,7 +17,7 @@ flex-flow: column;
     padding: 0.2rem;
     margin-top: 0.3rem ;
 
-    background-color: ${({open}) => open ? '#333' : '#ccc'};
+    background-color: ${({open}) => open ? '#586282' : '#c54040'};
     transform-origin: 0px;
     transition: all 0.3s linear;
     border-radius: 10px;
