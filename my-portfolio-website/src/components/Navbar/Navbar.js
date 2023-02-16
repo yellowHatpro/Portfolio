@@ -2,26 +2,26 @@ import React from "react";
 import { MenuItems } from "./MenuItems";
 import "./Navbar.css";
 import {Link} from "react-router-dom"
+import Burger from "../Burger/Burger";
 
 export const Navbar = () => {
  
   return (
     <nav>
       <div className="navbar">
-      <h1 className="navbar-items-logo">yellowHatpro</h1>
+      <h1 className="navbar-items-logo">yellowhatpro</h1>
       <ul className="navbar-items">
         {MenuItems.map((item, index) => {
           return (
-                <Link to= {`${item.link}`}>
+                <Link className = 'navbar-items-links' to= {`${item.link}`}>
                       <li key={index}>
-              <a className="navbar-items-links" href={item.link}>
                  {item.name}
-              </a>
             </li>
                 </Link>
           );
         })}
       </ul>
+      <Burger/>
       </div>
     </nav>
   );

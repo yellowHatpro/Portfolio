@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    height: 80px;
+    height: 5rem;
     justify-content: space-between;
     align-items: center;
     margin: 0.3rem;
@@ -32,7 +32,7 @@
         visibility: hidden;
     }
     .navbar-items-logo{
-        margin-bottom: 4rem;
+        margin-bottom: 13rem;
     }
 }
 
