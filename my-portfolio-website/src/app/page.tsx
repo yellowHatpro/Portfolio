@@ -27,7 +27,7 @@ export default function Home() {
 
                         </div>
                         <div className={"grid bg-red-400 rounded-2xl justify-items-center"}>
-                            <text className={"flex text text-xl lg:text-6xl font-black"}>100+</text>
+                            <text className={"flex text text-3xl lg:text-6xl font-black"}>100+</text>
                             <text className={"flex text text-xs lg:text-sm py-4 text-center"}>Open Source Contributions
                             </text>
                         </div>
@@ -73,9 +73,21 @@ export default function Home() {
                         <text className={"flex text-end text-md text-gray-500"}>See All</text>
                     </div>
                     <div className={"grid grid-cols-3 px-4 py-4  justify-between  items-center gap-2"}>
-                        <div className={"bg-green-50 h-52 rounded-2xl"}></div>
-                        <div className={"bg-green-50 h-52 rounded-2xl"}></div>
-                        <div className={"bg-green-50 h-52 rounded-2xl"}></div>
+                        <div className={"bg-green-50 h-52 rounded-2xl overflow-auto"}>
+                            <text className={"flex px-4 py-4 text-lg font-bold text-black"}><a href={""}>Metabrainz</a></text>
+                            <text className={"flex px-4 font-bold text-black"}>Google Summer Of Code'22 Mentee</text>
+                            <text className={"flex px-4 text-black"}>Added BrainzPlayer, a local music playback feature in MusicBrainz Android Application. The codebase is now migrated to ListenBrainz Android Application.</text>
+                        </div>
+                        <div className={"bg-green-50 h-52 rounded-2xl overflow-auto"}>
+                            <text className={"flex px-4 py-4 text-lg font-bold text-black"}><a href={""}>Atom EI</a></text>
+                            <text className={"flex px-4 font-bold text-black"}>Android Developer Intern</text>
+                            <text className={"flex px-4 text-black"}>Worked on the android application, and got my hands dirty on Clean Architecture, Cloud Functions, and FCM.</text>
+                        </div>
+                        <div className={"bg-green-50 h-52 rounded-2xl overflow-auto"}>
+                            <text className={"flex px-4 py-4 text-lg font-bold text-black"}><a href={""}>Sampoorna</a></text>
+                            <text className={"flex px-4 font-bold text-black"}>FOSS Overflow</text>
+                            <text className={"flex px-4 text-black"}>Developed Sampoorna, an open-source app for women that focuses on their safety and all-round development.</text>
+                        </div>
 
                     </div>
                 </div>
