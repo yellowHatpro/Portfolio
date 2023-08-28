@@ -1,6 +1,6 @@
-const  Card = ( props : {name: string}) => {
+const  Card = ( props : {name: string, color: string}) => {
  return(
-  <div className={"bg-sky-50 rounded-md"}>
+  <div className={`rounded-md h-[200px] ${props.color}`}>
        <text className={"text-black"}> 
       {props.name}
       </text>

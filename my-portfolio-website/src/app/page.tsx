@@ -75,7 +75,7 @@ export default function Home() {
                 <div className={"bg-dark-gray rounded-2xl "}>
                     <div className={"flex px-2 py-4  justify-between  items-center"}>
                         <text className={"flex text font-bold text-start text-md"}>Portfolio</text>
-            <Link  href = "/portfolio">
+            <Link href = "/portfolio">
                         <button className={"flex text-end text-md text-gray-500"}>See My Projects</button>
               </Link>
                     </div>
