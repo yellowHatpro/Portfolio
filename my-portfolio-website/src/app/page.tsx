@@ -80,7 +80,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="min-h-screen flex items-center justify-center">
-            <Carousel />
+            // <Carousel />
           </div>
         </div>
         <div className={"bg-dark-gray rounded-2xl col-span-1"}>
