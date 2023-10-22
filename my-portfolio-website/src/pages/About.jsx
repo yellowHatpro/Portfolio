@@ -18,12 +18,19 @@ export const About = () => (
                        🌐 Web Developer
                    </Button>
                    <Button>
-                       <text className={"text-blue-500"}>󰣇  </text>Linux User
+                       <text className={"text-blue-500"}>󰣇</text>Linux User
                    </Button>
                </div>
            </div>
-            <div>
-                <text>People ask me what can you create, I just say nothing and move on.</text>
+            <div className={"flex flex-col"}>
+               <h1 className={"text-8xl p-8"}>(≧∇≦)/</h1>
+                <h1 className={"text-lg font-light"}>Hello everyone, I am Ashutosh Aswal, aka yellowhatpro.
+                    A final year BTech student from PEC, Chandigarh, graduating in 2024.
+                    <br/> Experienced android developer, well versed with web technologies.
+                    I am interested in open source, computer science fundamentals, including Data Structures, Computer Networks, Operating Systems, Computer Architecture and
+                    love exploring new tech fields, programming languages, and frameworks.
+
+                </h1>
             </div>
         </div>
     </div>
@@ -31,6 +38,9 @@ export const About = () => (
         <div className={"flex justify-center items-center px-4 pt-4"}>
             <img className={"h-[560px] rounded-t-[40px]"} src={yellowhatproDP} alt={"yellowhatpro"}/>
         </div>
+    </div>
+    <div className={"flex text-4xl bg-black text-yellow-300 p-8 font-bold justify-center items-center"}>
+        YELLOWHATPRO ✨ OPEN FOR COLLABORATION
     </div>
 </>
 )

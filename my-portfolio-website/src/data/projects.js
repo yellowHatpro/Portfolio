@@ -1,3 +1,13 @@
+import {
+    codes_practiceDP,
+    flowerDP,
+    gridcoinDP,
+    knowledge_representationDP, listenbrainz_androidDP,
+    loanerDP, moviedroidDP,
+    my_webDP,
+    qnaDP, sampoornaDP
+} from "../assets/index.js";
+
 export const  projects = [
     {
         type: "frontend",
@@ -5,22 +15,22 @@ export const  projects = [
             {
                 name: "Codes-Practice",
                 link: 'https://codes-practice.vercel.app/',
-                img: ""
+                img: codes_practiceDP
             },
             {
                 name: "knowledge-representation",
                 link: "https://knowledge-representation.vercel.app/",
-                img: ""
+                img: knowledge_representationDP
             },
             {
                 name: "my-web",
                 link: "https://yellowhatpro.github.io/My-web/",
-                img: ""
+                img: my_webDP
             },
             {
                 name : "qna",
                 link : "https://github.com/yellowHatpro/qna",
-                img : ""
+                img : qnaDP
             }],
     },
     {
@@ -29,12 +39,12 @@ export const  projects = [
             {
                 name : "loaner",
                 link : "https://github.com/yellowHatpro/loaner",
-                img : ""
+                img : loanerDP
             },
             {
                 name : "qna",
                 link : "https://github.com/yellowHatpro/qna",
-                img : ""
+                img : qnaDP
             },
         ]
     },
@@ -44,12 +54,12 @@ export const  projects = [
             {
                 name: "Flower",
                 link: "https://github.com/yellowHatpro/flower",
-                img: ""
+                img: flowerDP
             },
             {
                 name: "GridCoin",
                 link: "https://github.com/yellowHatpro/gridcoin",
-                img: ""
+                img: gridcoinDP
             }
         ]
     },
@@ -58,18 +68,18 @@ export const  projects = [
         data: [
             {
                 name: "listenbrainz-android",
-                link : "https://github.com/yellowHatpro/listenbrainz-android",
-                img: ""
+                link: "https://github.com/yellowHatpro/listenbrainz-android",
+                img: listenbrainz_androidDP
             },
             {
                 name: "Sampoorna",
                 link: "https://github.com/yellowHatpro/sampoorna",
-                img : ""
+                img: sampoornaDP
             },
             {
-                name : "MovieDroid",
+                name: "MovieDroid",
                 link: "https://github.com/yellowHatpro/MovieDroid",
-                img: ""
+                img: moviedroidDP
             }
         ]
     }

@@ -1,15 +1,16 @@
 import {useState} from "react";
 import {projects} from "../data/index.js";
 import {Button} from "../components/Button.jsx";
+import {Card} from "../components/Card.jsx";
 
 export const Projects = () => {
     let [currentProjectType, setCurrentProjectType] = useState("frontend");
     const handleSetCurrentProject = (newProjectType) => {
         setCurrentProjectType(newProjectType)
     }
-    return (<div className={"p-8"}>
-        <div className={"flex flex-row sm:flex-col md:flex-row"}>
-            <div className={"text-neutral-400 font-bold text-6xl"}>
+    return (<div id={"projects"} className={"p-8"}>
+        <div className={"flex flex-row sm:flex-col md:flex-row justify-evenly"}>
+            <div className={"flex flex-row text-7xl font-black text-neutral-300"}>
                 BEST PROJECTS.
             </div>
             <div className={"text-neutral-600"}>
@@ -33,14 +34,17 @@ export const Projects = () => {
                 </Button>
             </div>
         </div>
-        <div>
+        <div className={"grid md:grid-cols-2 sm:grid-cols-1"}>
             {
                 projects.filter((projectType)=>projectType.type===currentProjectType).map((projectType,_)=> (
                     projectType.data.map((project,pid)=> (
                         <div
-                            className={"text-white"}
+                            className={"p-2"}
                             key={pid}>
-                            {project.name}
+                            <Card
+                                dp = {project.img}
+                                link={project.link}
+                                title={project.name} />
                         </div>
                     ))
                 ))
