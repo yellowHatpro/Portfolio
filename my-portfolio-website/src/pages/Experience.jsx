@@ -36,16 +36,16 @@ export const Experience = () => (
                </div>
            </div>
             <div className={"px-2 text-3xl divide-y divide-gray-500"}>
-                <ExperienceDiv >
+                <ExperienceDiv content={"Did Google Summer of Code"}>
                     Google Summer of Code 2022 @ MetaBrainz
                 </ExperienceDiv>
-                <ExperienceDiv >
+                <ExperienceDiv content={"Android Development Internship with Atom Ei"}>
                     Atom EI | Android Developer
                 </ExperienceDiv>
-                <ExperienceDiv >
+                <ExperienceDiv content={"Got selected in Foss Overflow 2021 as the mentee for the project Sampoorna"}>
                     FOSS Overflow 2021 Mentee
                 </ExperienceDiv>
-                <ExperienceDiv >
+                <ExperienceDiv content={"Mentored project Sampoorna"}>
                     GirlScript Summer of Code 2021 Mentor
                 </ExperienceDiv>
             </div>
