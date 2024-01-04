@@ -10,10 +10,10 @@ export const About = () => {
         if (scrollPosition > window.outerWidth || scrollPosition < 0) {
             setShouldShowAnimation(false)
         }
-        window.addEventListener('scroll', ()=>setScrollPosition(Math.min(Math.max(window.scrollY*2,0),window.innerWidth/2+20)))
+        window.addEventListener('scroll', ()=>setScrollPosition(Math.min(Math.max(window.scrollY*2,0),window.innerWidth/2+window.innerWidth/40)))
         return () => {
             setShouldShowAnimation(true)
-            window.removeEventListener('scroll', ()=>setScrollPosition(Math.min(Math.max(window.scrollY*2,0),window.innerWidth/2+20)))
+            window.removeEventListener('scroll', ()=>setScrollPosition(Math.min(Math.max(window.scrollY*2,0),window.innerWidth/2+window.innerWidth/40)))
         }
     }, [scrollPosition]);
     return <>
