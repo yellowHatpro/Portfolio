@@ -10,10 +10,10 @@ export const About = () => {
         if (scrollPosition > window.outerWidth || scrollPosition < 0) {
             setShouldShowAnimation(false)
         }
-        window.addEventListener('scroll', ()=>setScrollPosition(window.scrollY*2))
+        window.addEventListener('scroll', ()=>setScrollPosition(Math.min(Math.max(window.scrollY*2,0),window.innerWidth/2+20)))
         return () => {
             setShouldShowAnimation(true)
-            window.removeEventListener('scroll', ()=>setScrollPosition(window.scrollY*2))
+            window.removeEventListener('scroll', ()=>setScrollPosition(Math.min(Math.max(window.scrollY*2,0),window.innerWidth/2+20)))
         }
     }, [scrollPosition]);
     return <>
@@ -68,10 +68,6 @@ export const About = () => {
                     alt={"chasma"}
                 />
             </div>}
-            {shouldShowAnimation && <div
-                style={{transform: `translateX(-${scrollPosition}px)`}}
-                className={"max-w-screen-md absolute right-0 top-1/2 z-20 transition-transform duration-500 transform translate-x-[-50%]"}>Hire
-                me too</div>}
             <div>
                 <div className={"flex justify-center items-center px-4 pt-4"}>
                     <img
