@@ -6,16 +6,16 @@ import { Projects } from "./pages/Projects.jsx";
 import { ConnectMe } from "./pages/ConnectMe.jsx";
 
 function App() {
-    return (
-        <>
-            <Navbar />
-            <About />
-            <Experience />
-            <Education />
-            <Projects />
-            <ConnectMe />
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <About />
+      <Experience />
+      <Education />
+      <Projects />
+      <ConnectMe />
+    </>
+  );
 }
 
 export default App;
