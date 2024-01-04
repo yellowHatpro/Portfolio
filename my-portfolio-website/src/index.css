@@ -8,9 +8,25 @@
   font-weight: 400;
   background-color: #171717;
   width: fit-content;
+  min-width: initial;
   font-synthesis: none;
+  margin: auto;
+  align-items: center;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.indefinite-rotate{
+  animation: spin 5s linear infinite;
 }
