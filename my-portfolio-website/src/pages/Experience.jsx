@@ -1,5 +1,5 @@
-import {Button} from "../components/Button.jsx";
-import ExperienceDiv from "../components/ExperienceDiv.jsx";
+import {Button} from "../components";
+import {ExperienceAccordian} from "../components";
 import {experienceContent} from "../data";
 
 export const Experience = () => (
@@ -34,18 +34,7 @@ export const Experience = () => (
                </div>
            </div>
             <div className={"px-2 text-3xl divide-y divide-gray-500"}>
-                <ExperienceDiv content={experienceContent.metabrainz}>
-                    Metabrainz | Google Summer of Code 2022
-                </ExperienceDiv>
-                <ExperienceDiv content={experienceContent.atomEI}>
-                    Atom EI | Android Developer Intern
-                </ExperienceDiv>
-                <ExperienceDiv content={experienceContent.fossOverflow}>
-                    FOSS Overflow
-                </ExperienceDiv>
-                <ExperienceDiv content={experienceContent.gssoc2022}>
-                    GirlScript Summer of Code 2021 Mentor
-                </ExperienceDiv>
+               <ExperienceAccordian/>
             </div>
         </div>
     </div>

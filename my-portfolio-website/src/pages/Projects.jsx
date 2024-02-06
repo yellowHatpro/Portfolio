@@ -1,8 +1,7 @@
 import { Suspense, useState } from "react";
 import { projects } from "../data";
-import { Button } from "../components/Button.jsx";
-import { Card } from "../components/Card.jsx";
-import { FiLoader } from "react-icons/fi";
+import { Button } from "../components";
+import { Card } from "../components";
 
 export const Projects = () => {
     let [currentProjectType, setCurrentProjectType] = useState("web");
@@ -53,15 +52,11 @@ export const Projects = () => {
                     .map((projectType) =>
                         projectType.data.map((project, pid) => (
                             <div className={"p-2"} key={pid}>
-                                <Suspense
-                                    fallback={<FiLoader className={"indefinite-rotate"} />}
-                                >
                                     <Card
                                         dp={project.img}
                                         link={project.link}
                                         title={project.name}
                                     />
-                                </Suspense>
                             </div>
                         )),
                     )}

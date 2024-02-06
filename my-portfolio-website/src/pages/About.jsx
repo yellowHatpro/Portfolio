@@ -1,12 +1,11 @@
 import {chasma, yellowhatproDP} from "../assets";
-import { Button } from "../components/Button.jsx";
+import { Button } from "../components";
 import {useEffect, useState} from "react";
 export const About = () => {
     const [scrollPosition, setScrollPosition] = useState(0)
     const [shouldShowAnimation, setShouldShowAnimation] = useState(true)
 
     useEffect(() => {
-        console.log(window.outerWidth)
         if (scrollPosition > window.outerWidth || scrollPosition < 0) {
             setShouldShowAnimation(false)
         }
@@ -40,7 +39,7 @@ export const About = () => {
                 </div>
                 <div className={"flex flex-col p-2 items-center"}>
                     <h1 className={"text-8xl p-8"}>(≧∇≦)/</h1>
-                    <h1 className={"text-lg font-light text-justify"}>
+                    <h1 className={"text-lg font-light text-justify p-4"}>
                         Hello everyone, I am Ashutosh Aswal, aka yellowhatpro. A final year
                         BTech student from PEC, Chandigarh, graduating in 2024.
                         <br/> Experienced android developer, well versed with web

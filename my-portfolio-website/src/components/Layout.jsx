@@ -23,13 +23,13 @@ const Layout = ({children}) => {
         <div className={"bg-yellow-400 flex flex-row justify-between py-4 px-8 "}>
             <h1 className={"font-extralight text-2xl"}>yellowhatpro</h1>
             <div className={"child:px-4 flex flex-row child-hover:underline child-hover:animate-bounce"}>
-                <text
+                <div
                     onClick={()=>handleScrollToSection("projects")}
-                    ><h1>PROJECTS</h1></text>
-                <text
-                    onClick={()=>handleScrollToSection("education")}><h1>EDUCATION</h1></text>
-                <text
-                onClick={()=>handleScrollToSection("connect")}><h1>LET&apos;S CONNECT</h1></text>
+                    ><h1>PROJECTS</h1></div>
+                <div
+                    onClick={()=>handleScrollToSection("education")}><h1>EDUCATION</h1></div>
+                <div
+                onClick={()=>handleScrollToSection("connect")}><h1>LET&apos;S CONNECT</h1></div>
             </div>
         </div>
         {children}

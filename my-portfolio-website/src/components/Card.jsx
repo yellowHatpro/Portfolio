@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-export const Card = ({title, link, dp}) => (
+const Card = ({title, link, dp}) => (
     <a target={"_blank"} href={link} rel="noreferrer">
         <div className={"min-h-full relative child-hover:opacity-90"}>
             <div className={"absolute z-20 text-white opacity-0 hover:bg-black w-full h-full flex justify-center items-center transition-all duration-300 ease-in-out"}>{title}</div>
@@ -9,3 +9,4 @@ export const Card = ({title, link, dp}) => (
         </div>
     </a>
 )
+export default Card

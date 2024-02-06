@@ -1,4 +1,4 @@
-import {Button} from "../components/Button.jsx";
+import {Button} from "../components";
 import {AiFillGithub, AiFillLinkedin, AiFillTwitterCircle} from "react-icons/ai";
 import {BsDiscord} from "react-icons/bs";
 
