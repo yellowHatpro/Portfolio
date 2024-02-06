@@ -10,5 +10,5 @@ import my_webDP from './my_web.png';
 import qnaDP from './qna.png';
 import sampoornaDP from './sampoorna.png';
 import chasma from './chasma.svg';
-
-export {yellowhatproDP, chasma, flowerDP, codes_practiceDP, qnaDP, gridcoinDP, moviedroidDP, loanerDP, my_webDP, sampoornaDP, knowledge_representationDP, listenbrainz_androidDP}
+import studyAdda from './study_adda.png';
+export {yellowhatproDP, chasma, flowerDP, codes_practiceDP, qnaDP, gridcoinDP, moviedroidDP, loanerDP, my_webDP, sampoornaDP, knowledge_representationDP, listenbrainz_androidDP, studyAdda}

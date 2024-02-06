@@ -3,7 +3,7 @@ import {AiFillGithub, AiFillLinkedin, AiFillTwitterCircle} from "react-icons/ai"
 import {BsDiscord} from "react-icons/bs";
 
 export const ConnectMe = () => (
-    <div id={"connect"} className={"flex flex-col items-center justify-center text-center bg-yellow-400 rounded-b-[40px] m-8 p-24"}>
+    <div id={"connect"} className={"flex flex-col items-center justify-center text-center bg-yellow-400 rounded-b-[40px] mx-8 p-24"}>
         <div className={"text-6xl font-bold "}>
             LETS CONNECT
         </div>

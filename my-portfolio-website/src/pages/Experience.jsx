@@ -1,6 +1,6 @@
 import {Button} from "../components/Button.jsx";
 import ExperienceDiv from "../components/ExperienceDiv.jsx";
-import {experienceContent} from "../utils/content.js";
+import {experienceContent} from "../data";
 
 export const Experience = () => (
     <div className={"bg-neutral-900  p-8"}>
@@ -16,17 +16,14 @@ export const Experience = () => (
                        There is a reason why I say I am a god knows what stack developer
                    </div>
                </div>
-               <div className={"grid grid-cols-2 lg:grid-cols-3 child:m-4 child:border-gray-500 text-gray-500 child:text-sm child-hover:text-neutral-300 child-hover:border-neutral-300"}>
+               <div className={"grid grid-cols-2 lg:grid-cols-3 child:m-4 child:border-gray-500 child:text-gray-500 child:text-sm child-hover:text-neutral-300 child-hover:border-neutral-300"}>
                 <Button>
                     🌐 Android Development
                 </Button>
                    <Button>
-                       🌐 Frontend Development
+                       🌐 Web Development
                    </Button>
 
-                   <Button>
-                       🌐 Backend Development
-                   </Button>
                    <Button>
                        🌐 Design
                    </Button>

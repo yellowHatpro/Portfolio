@@ -1,41 +1,48 @@
 import { Suspense, useState } from "react";
-import { projects } from "../data/index.js";
+import { projects } from "../data";
 import { Button } from "../components/Button.jsx";
 import { Card } from "../components/Card.jsx";
 import { FiLoader } from "react-icons/fi";
 
 export const Projects = () => {
-    let [currentProjectType, setCurrentProjectType] = useState("frontend");
-    const handleSetCurrentProject = (newProjectType) => {
-        setCurrentProjectType(newProjectType);
-    };
+    let [currentProjectType, setCurrentProjectType] = useState("web");
+
     return (
         <div id={"projects"} className={"p-8"}>
             <div className={"flex flex-row sm:flex-col md:flex-row justify-evenly"}>
                 <div className={"flex flex-row text-7xl font-black text-neutral-300"}>
-                    BEST PROJECTS <h1>.</h1>
+                    BEST PROJECTS.
                 </div>
                 <div className={"text-neutral-600"}>
-                    Creative fuels design, design fuels creativity, be here for more, are
-                    you in love with a creative?
+                    {"I have worked on multiple personal and open source projects, enjoying my time building stuff.\n" +
+                        "Here are some of my personal and open source projects I have worked on."}
                 </div>
             </div>
             <div>
                 <div
                     className={
-                        "flex flex-row child:m-4 child:border-2 child:rounded-3xl child:p-0.5 child:border-gray-500 text-gray-500 child:text-sm child-hover:text-white child-hover:border-white"
+                        "flex flex-row child:m-4 child:border-2 child:rounded-3xl child:p-0.5 text-gray-500 child:text-sm child-hover:text-white child-hover:border-white"
                     }
                 >
-                    <Button onClick={() => handleSetCurrentProject("frontend")}>
-                        Frontend
+                    <Button
+                        onClick={() => setCurrentProjectType("web")}
+                        text={"text-gray-500"}
+                        border={"border-gray-500"}
+                        isSelected={currentProjectType === "web"}>
+                        Web
                     </Button>
-                    <Button onClick={() => handleSetCurrentProject("backend")}>
-                        Backend
-                    </Button>
-                    <Button onClick={() => handleSetCurrentProject("blockchain")}>
+                    <Button
+                        onClick={() => setCurrentProjectType("blockchain")}
+                        text={"text-gray-500"}
+                        border={"border-gray-500"}
+                        isSelected={currentProjectType==="blockchain"}>
                         Blockchain
                     </Button>
-                    <Button onClick={() => handleSetCurrentProject("android")}>
+                    <Button
+                        onClick={() => setCurrentProjectType("android")}
+                        text={"text-gray-500"}
+                        border={"border-gray-500"}
+                        isSelected={currentProjectType==="android"}>
                         Android
                     </Button>
                 </div>

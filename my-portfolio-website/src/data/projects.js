@@ -5,12 +5,12 @@ import {
   knowledge_representationDP, listenbrainz_androidDP,
   loanerDP, moviedroidDP,
   my_webDP,
-  qnaDP, sampoornaDP
+  qnaDP, sampoornaDP, studyAdda
 } from "../assets/index.js";
 
 export const projects = [
   {
-    type: "frontend",
+    type: "web",
     data: [
       {
         name: "Codes-Practice",
@@ -28,15 +28,6 @@ export const projects = [
         img: my_webDP
       },
       {
-        name: "qna",
-        link: "https://github.com/yellowHatpro/qna",
-        img: qnaDP
-      }],
-  },
-  {
-    type: "backend",
-    data: [
-      {
         name: "loaner",
         link: "https://github.com/yellowHatpro/loaner",
         img: loanerDP
@@ -46,7 +37,12 @@ export const projects = [
         link: "https://github.com/yellowHatpro/qna",
         img: qnaDP
       },
-    ]
+      {
+        name: "study adda",
+        link:"https://studyadda.vercel.app/",
+        img: studyAdda
+      }
+      ],
   },
   {
     type: "blockchain",

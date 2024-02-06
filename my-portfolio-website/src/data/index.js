@@ -1,2 +1,4 @@
 import {projects} from './projects.js'
-export  {projects}
+import {experienceContent} from "./experience.js";
+
+export  {projects, experienceContent}
