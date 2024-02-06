@@ -12,7 +12,7 @@ const ExperienceDiv = ({children, content}) => {
                 onClick={() => setIsOpen((val)=>!val)}>
                 {isOpen ? <TfiArrowUp/> : <TfiArrowDown/>}</div>
         </div>
-        {isOpen && <div className={"transition transform motion-reduce:transition-none motion-reduce:hover:transform-none"}>{content}</div>}
+        {isOpen && <div className={"px-8 pb-4 text-justify text-gray-200 text-xl transition transform motion-reduce:transition-none motion-reduce:hover:transform-none"}>{content}</div>}
     </div>
 };
 

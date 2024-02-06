@@ -1,5 +1,6 @@
 import {Button} from "../components/Button.jsx";
 import ExperienceDiv from "../components/ExperienceDiv.jsx";
+import {experienceContent} from "../utils/content.js";
 
 export const Experience = () => (
     <div className={"bg-neutral-900  p-8"}>
@@ -36,16 +37,16 @@ export const Experience = () => (
                </div>
            </div>
             <div className={"px-2 text-3xl divide-y divide-gray-500"}>
-                <ExperienceDiv content={"Did Google Summer of Code"}>
-                    Google Summer of Code 2022 @ MetaBrainz
+                <ExperienceDiv content={experienceContent.metabrainz}>
+                    Metabrainz | Google Summer of Code 2022
                 </ExperienceDiv>
-                <ExperienceDiv content={"Android Development Internship with Atom Ei"}>
-                    Atom EI | Android Developer
+                <ExperienceDiv content={experienceContent.atomEI}>
+                    Atom EI | Android Developer Intern
                 </ExperienceDiv>
-                <ExperienceDiv content={"Got selected in Foss Overflow 2021 as the mentee for the project Sampoorna"}>
-                    FOSS Overflow 2021 Mentee
+                <ExperienceDiv content={experienceContent.fossOverflow}>
+                    FOSS Overflow
                 </ExperienceDiv>
-                <ExperienceDiv content={"Mentored project Sampoorna"}>
+                <ExperienceDiv content={experienceContent.gssoc2022}>
                     GirlScript Summer of Code 2021 Mentor
                 </ExperienceDiv>
             </div>
