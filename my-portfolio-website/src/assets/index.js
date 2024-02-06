@@ -11,4 +11,28 @@ import qnaDP from './qna.png';
 import sampoornaDP from './sampoorna.png';
 import chasma from './chasma.svg';
 import studyAdda from './study_adda.png';
-export {yellowhatproDP, chasma, flowerDP, codes_practiceDP, qnaDP, gridcoinDP, moviedroidDP, loanerDP, my_webDP, sampoornaDP, knowledge_representationDP, listenbrainz_androidDP, studyAdda}
+import lesgoCred from './lesgo_cred.png';
+import yada from './yada.png';
+import betterFocus from './better_focus.png';
+import reciboi from './reciboi.png'
+import logo from '../../logo.png'
+
+export {yellowhatproDP,
+    chasma,
+    flowerDP,
+    codes_practiceDP,
+    qnaDP,
+    gridcoinDP,
+    moviedroidDP,
+    loanerDP,
+    my_webDP,
+    sampoornaDP,
+    knowledge_representationDP,
+    listenbrainz_androidDP,
+    studyAdda,
+    lesgoCred,
+    yada,
+    betterFocus,
+    reciboi,
+    logo
+}

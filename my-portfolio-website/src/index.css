@@ -16,6 +16,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --primary: #facc15;
+  --secondary: black;
 }
 
 @keyframes spin {
@@ -29,4 +31,24 @@
 
 .indefinite-rotate{
   animation: spin 5s linear infinite;
+}
+
+::-webkit-scrollbar {
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar-track {
+  width: 15px;
+  background: repeating-linear-gradient(
+          45deg,
+          var(--secondary),
+          var(--secondary) 5px,
+          var(--primary) 5px,
+          var(--primary) 10px
+  );
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #171717;
+  border-radius: 14px;
+  height: 100px;
 }

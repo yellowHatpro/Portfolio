@@ -1,34 +1,35 @@
 import {
+  betterFocus,
   codes_practiceDP,
   flowerDP,
   gridcoinDP,
-  knowledge_representationDP, listenbrainz_androidDP,
+  knowledge_representationDP, lesgoCred, listenbrainz_androidDP,
   loanerDP, moviedroidDP,
   my_webDP,
-  qnaDP, sampoornaDP, studyAdda
-} from "../assets/index.js";
+  qnaDP, reciboi, sampoornaDP, studyAdda, yada
+} from "../assets";
 
 export const projects = [
   {
     type: "web",
     data: [
       {
-        name: "Codes-Practice",
+        name: "Codes Practice",
         link: 'https://codes-practice.vercel.app/',
         img: codes_practiceDP
       },
       {
-        name: "knowledge-representation",
+        name: "Knowledge Representation",
         link: "https://knowledge-representation.vercel.app/",
         img: knowledge_representationDP
       },
       {
-        name: "my-web",
+        name: "My Web",
         link: "https://yellowhatpro.github.io/My-web/",
         img: my_webDP
       },
       {
-        name: "loaner",
+        name: "Loaner",
         link: "https://github.com/yellowHatpro/loaner",
         img: loanerDP
       },
@@ -38,7 +39,7 @@ export const projects = [
         img: qnaDP
       },
       {
-        name: "study adda",
+        name: "Study Adda",
         link:"https://studyadda.vercel.app/",
         img: studyAdda
       }
@@ -63,7 +64,7 @@ export const projects = [
     type: "android",
     data: [
       {
-        name: "listenbrainz-android",
+        name: "Listenbrainz",
         link: "https://github.com/yellowHatpro/listenbrainz-android",
         img: listenbrainz_androidDP
       },
@@ -76,7 +77,27 @@ export const projects = [
         name: "MovieDroid",
         link: "https://github.com/yellowHatpro/MovieDroid",
         img: moviedroidDP
+      },
+      {
+        name: "LesgoCred",
+        link: "https://github.com/yellowHatpro/LesgoCRED",
+        img: lesgoCred
+      },
+      {
+        name: "YADA",
+        link: "https://github.com/yellowHatpro/YADA",
+        img: yada
+      },
+      {
+        name: "Better Focus",
+        link: "https://github.com/yellowHatpro/Better-Focus",
+        img: betterFocus
+      },
+      {
+        name: "ReciBoi",
+        link: "https://github.com/yellowHatpro/ReciBoi",
+        img: reciboi
       }
     ]
-  }
+  },
 ]

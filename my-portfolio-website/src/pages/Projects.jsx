@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { projects } from "../data";
 import { Button } from "../components";
 import { Card } from "../components";
@@ -12,9 +12,9 @@ export const Projects = () => {
                 <div className={"flex flex-row text-7xl font-black text-neutral-300"}>
                     BEST PROJECTS.
                 </div>
-                <div className={"text-neutral-600"}>
-                    {"I have worked on multiple personal and open source projects, enjoying my time building stuff.\n" +
-                        "Here are some of my personal and open source projects I have worked on."}
+                <div className={"text-neutral-400 font-light m-4 text-justify text-lg"}>
+                    {"Experienced in building different apps of different kinds. Worked on multiple personal and open source projects, enjoying my time building stuff.\n" +
+                        "Here are \"some\" of my personal and open source projects I have worked on. Do visit my github profile for more 😋."}
                 </div>
             </div>
             <div>
