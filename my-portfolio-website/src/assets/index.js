@@ -16,6 +16,10 @@ import yada from './yada.png';
 import betterFocus from './better_focus.png';
 import reciboi from './reciboi.png'
 import logo from '../../logo.png'
+import prastuti from './prastuti.png'
+import khanakhazana from './khanakhazana.png';
+import w3smartwallet from './w3smartwallet.png';
+import iremember from './i-remember.png';
 
 export {yellowhatproDP,
     chasma,
@@ -34,5 +38,9 @@ export {yellowhatproDP,
     yada,
     betterFocus,
     reciboi,
-    logo
+    logo,
+    prastuti,
+    khanakhazana,
+    w3smartwallet,
+    iremember
 }

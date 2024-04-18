@@ -2,11 +2,11 @@ import {
   betterFocus,
   codes_practiceDP,
   flowerDP,
-  gridcoinDP,
+  gridcoinDP, iremember, khanakhazana,
   knowledge_representationDP, lesgoCred, listenbrainz_androidDP,
   loanerDP, moviedroidDP,
-  my_webDP,
-  qnaDP, reciboi, sampoornaDP, studyAdda, yada
+  my_webDP, prastuti,
+  qnaDP, reciboi, sampoornaDP, studyAdda, w3smartwallet, yada
 } from "../assets";
 
 export const projects = [
@@ -24,14 +24,14 @@ export const projects = [
         img: knowledge_representationDP
       },
       {
-        name: "My Web",
-        link: "https://yellowhatpro.github.io/My-web/",
-        img: my_webDP
+        name: "Khana Khazana",
+        link: "https://khanakhazana.vercel.app/",
+        img: khanakhazana
       },
       {
-        name: "Loaner",
-        link: "https://github.com/yellowHatpro/loaner",
-        img: loanerDP
+        name: "Prastuti.ai",
+        link: "https://prastuti-ai.vercel.app/",
+        img: prastuti
       },
       {
         name: "qna",
@@ -42,7 +42,17 @@ export const projects = [
         name: "Study Adda",
         link:"https://studyadda.vercel.app/",
         img: studyAdda
-      }
+      },
+      {
+        name: "My Web",
+        link: "https://yellowhatpro.github.io/My-web/",
+        img: my_webDP
+      },
+      {
+        name: "Loaner",
+        link: "https://github.com/yellowHatpro/loaner",
+        img: loanerDP
+      },
       ],
   },
   {
@@ -57,6 +67,11 @@ export const projects = [
         name: "GridCoin",
         link: "https://github.com/yellowHatpro/gridcoin",
         img: gridcoinDP
+      },
+      {
+        name: "w3 Smart Wallet",
+        link: "https://w3-smart-wallet.vercel.app/",
+        img: w3smartwallet
       }
     ]
   },
@@ -100,4 +115,14 @@ export const projects = [
       }
     ]
   },
+  {
+    type: "rust",
+    data: [
+      {
+        name: "i-remember",
+        link: "https://github.com/yellowHatpro/i-remember",
+        img: iremember
+      }
+    ]
+  }
 ]

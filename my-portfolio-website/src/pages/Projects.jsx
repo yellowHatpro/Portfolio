@@ -44,6 +44,13 @@ export const Projects = () => {
                         isSelected={currentProjectType==="android"}>
                         Android
                     </Button>
+                    <Button
+                        onClick={() => setCurrentProjectType("rust")}
+                        text={"text-gray-500"}
+                        border={"border-gray-500"}
+                        isSelected={currentProjectType==="rust"}>
+                        Rust
+                    </Button>
                 </div>
             </div>
             <div className={"grid md:grid-cols-2 sm:grid-cols-1"}>
