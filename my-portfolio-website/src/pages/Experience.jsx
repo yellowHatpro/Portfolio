@@ -30,6 +30,9 @@ export const Experience = () => (
                    <Button>
                        🌐 Blockchain
                    </Button>
+                   <Button>
+                       🌐 Rust
+                   </Button>
 
                </div>
            </div>

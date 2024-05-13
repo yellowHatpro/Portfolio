@@ -1,4 +1,20 @@
 export const experienceContent = [
+    {
+        title: "Metabrainz | Google Summer of Code 2024",
+        content: "Responsible for initiating MusicBrainz - Internet Archive integration:" +
+            " which involves creating a Rust\n" +
+            "background service that polls MusicBrainz Postgres database, " +
+            "generating rust-bindings for the database schema,\n" +
+            "and archiving the extracted data using WayBack Machine APIs.",
+        link: "https://summerofcode.withgoogle.com/programs/2024/projects/tM1Jlyqf"
+    },
+    {
+        title: "Limurse | Software Developer Engineer Intern",
+        content: "Building a social media platform which provides users quests within their cities." +
+            " Overhauled UI features, made searches faster using Algolia indexes." +
+            " Leveraging Firebase and Next.js to ensure seamless functionality and enhanced user experience.",
+        link: "https://www.limurse.com"
+    },
      {
         title: "Metabrainz | Google Summer of Code 2022",
         content: "Contributed to Metabrainz's Musicbrainz Android app" +
