@@ -40,8 +40,8 @@ export const About = () => {
                 <div className={"flex flex-col p-2 items-center"}>
                     <h1 className={"text-8xl p-8"}>(≧∇≦)/</h1>
                     <h1 className={"text-lg font-light text-justify p-4"}>
-                        Hello everyone, I am Ashutosh Aswal, aka yellowhatpro. A final year
-                        BTech student from PEC, Chandigarh, graduating in 2024.
+                        Hello everyone, I am Ashutosh Aswal, aka yellowhatpro. A
+                        BTech CSE graduate from PEC, Chandigarh.
                         <br/> Experienced android developer, well versed with web
                         technologies. I am interested in open source, anime, computer
                         science fundamentals, including Data Structures, Computer Networks,

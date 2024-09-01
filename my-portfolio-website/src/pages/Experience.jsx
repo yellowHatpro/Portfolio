@@ -1,6 +1,5 @@
 import {Button} from "../components";
 import {ExperienceAccordian} from "../components";
-import {experienceContent} from "../data";
 
 export const Experience = () => (
     <div className={"bg-neutral-900  p-8"}>

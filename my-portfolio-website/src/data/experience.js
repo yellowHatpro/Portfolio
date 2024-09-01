@@ -1,5 +1,10 @@
 export const experienceContent = [
     {
+        title: "Wuri (YC W24) | Software Engineer",
+        content: "Working on media pipelines, that includes audio generation, video creation from user prompts, and serving them through APIs.",
+        link: "https://www.wuri.ai/"
+    },
+    {
         title: "Metabrainz | Google Summer of Code 2024",
         content: "Responsible for initiating MusicBrainz - Internet Archive integration:" +
             " which involves creating a Rust\n" +
