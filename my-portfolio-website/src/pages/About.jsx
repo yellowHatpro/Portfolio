@@ -1,36 +1,105 @@
 import { chasma, yellowhatproDP } from "../assets";
 import { Button } from "../components";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+
 export const About = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [shouldShowAnimation, setShouldShowAnimation] = useState(true);
+  const aboutRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
-    if (scrollPosition > window.outerWidth || scrollPosition < 0) {
-      setShouldShowAnimation(false);
-    }
-    window.addEventListener("scroll", () =>
-      setScrollPosition(
-        Math.min(
-          Math.max(window.scrollY * 2, 0),
-          window.innerWidth / 2 + window.innerWidth / 40
-        )
-      )
-    );
-    return () => {
-      setShouldShowAnimation(true);
-      window.removeEventListener("scroll", () =>
-        setScrollPosition(
-          Math.min(
-            Math.max(window.scrollY * 2, 0),
-            window.innerWidth / 2 + window.innerWidth / 40
-          )
-        )
+    const handleScroll = () => {
+      if (!imageRef.current) return;
+
+      // Get the image's boundaries
+      const imageRect = imageRef.current.getBoundingClientRect();
+      const imageTop = imageRect.top;
+      const imageHeight = imageRect.height;
+      const imageBottom = imageTop + imageHeight;
+
+      // Only animate when the image is at least partially visible
+      if (imageBottom < 0 || imageTop > window.innerHeight) {
+        setShouldShowAnimation(false);
+        return;
+      }
+
+      // Calculate progress based on image position in viewport
+      // 0 = image just entered viewport from bottom (glasses at pocket)
+      // 1 = image is centered in viewport (glasses on eyes)
+      let progress = 0;
+
+      // Calculate the center point of the viewport
+      const viewportCenter = window.innerHeight / 2;
+
+      // Calculate how far the image center is from viewport center
+      const imageCenterY = imageTop + imageHeight / 2;
+      const distanceFromCenter = viewportCenter - imageCenterY;
+
+      // Normalize to 0-1 range
+      // When image center is at bottom of viewport: progress = 0
+      // When image center is at center of viewport: progress = 1
+      // When image center is at top of viewport: progress = 0
+      progress = Math.max(
+        0,
+        Math.min(1, (distanceFromCenter + imageHeight / 4) / (imageHeight / 2))
       );
+
+      setScrollProgress(progress);
+      setShouldShowAnimation(true);
     };
-  }, [scrollPosition]);
+
+    window.addEventListener("scroll", handleScroll);
+    // Initial calculation
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const getSpecsStyle = () => {
+    // Calculate position based on scroll progress
+    // 0 = at pocket (bottom)
+    // 1 = at eyes (top)
+
+    // Pocket position (starting point)
+    const pocketTop = "calc(70% - 0.625rem)";
+    const pocketLeft = "calc(50% + 1.25rem)";
+    const pocketRotation = 45; // Tilted
+
+    // Eyes position (ending point)
+    const eyesTop = "calc(30% - 4rem)";
+    const eyesLeft = "calc(53% - 1rem)";
+
+    // Interpolate between pocket and eyes based on progress
+    const currentRotation = pocketRotation * (1.6 - scrollProgress);
+
+    //Responsive horizontal position that works on all screen sizes
+    const leftPosition =
+      scrollProgress === 1
+        ? eyesLeft
+        : scrollProgress === 0
+        ? pocketLeft
+        : `calc(${pocketLeft} - ${
+            scrollProgress * (window.innerWidth < 640 ? 2.5 : 1.25)
+          }rem)`;
+
+    return {
+      transform: `rotate(${currentRotation}deg)`,
+      top:
+        scrollProgress === 1
+          ? eyesTop
+          : scrollProgress === 0
+          ? pocketTop
+          : `calc(${pocketTop} - ${scrollProgress * 40}%)`,
+      left: leftPosition,
+      transition: "all 0.2s ease-out",
+    };
+  };
+
   return (
-    <>
+    <div ref={aboutRef}>
       <div className={"bg-yellow-400 p-8"}>
         <div
           className={
@@ -69,30 +138,28 @@ export const About = () => {
         </div>
       </div>
       <div className={"bg-yellow-400 relative"}>
-        {shouldShowAnimation && (
-          <div
-            style={{ transform: `translateX(${scrollPosition}px)` }}
-            className={
-              "max-w-screen-md absolute left-0 top-40 z-10 transition-transform transform translate-x-[-50%]"
-            }
-          >
-            <img
-              className={"rotate-[20deg]"}
-              height={150}
-              width={150}
-              src={chasma}
-              alt={"chasma"}
-            />
-          </div>
-        )}
-        <div>
-          <div className={"flex justify-center items-center px-4 pt-4"}>
-            <img
-              className={"h-[560px] rounded-t-[40px]"}
-              src={yellowhatproDP}
-              alt={"yellowhatpro"}
-            />
-          </div>
+        <div className="relative flex justify-center items-center px-4 pt-4">
+          <img
+            ref={imageRef}
+            className={"h-[560px] w-auto rounded-t-[40px]"}
+            src={yellowhatproDP}
+            alt={"yellowhatpro"}
+          />
+
+          {shouldShowAnimation && (
+            <div
+              style={getSpecsStyle()}
+              className={"absolute z-10 transform -translate-x-1/2"}
+            >
+              <img
+                className={
+                  "sm:w-[6.25rem] sm:h-[6.25rem] md:w-[7.5rem] md:h-[7.5rem] lg:w-[9.375rem] lg:h-[9.375rem]"
+                }
+                src={chasma}
+                alt={"chasma"}
+              />
+            </div>
+          )}
         </div>
       </div>
       <div
@@ -102,6 +169,6 @@ export const About = () => {
       >
         YELLOWHATPRO ✨ OPEN FOR COLLABORATION
       </div>
-    </>
+    </div>
   );
 };
