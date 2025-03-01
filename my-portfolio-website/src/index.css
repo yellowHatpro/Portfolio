@@ -29,7 +29,7 @@
   }
 }
 
-.indefinite-rotate{
+.indefinite-rotate {
   animation: spin 5s linear infinite;
 }
 
@@ -39,11 +39,11 @@
 ::-webkit-scrollbar-track {
   width: 15px;
   background: repeating-linear-gradient(
-          45deg,
-          var(--secondary),
-          var(--secondary) 5px,
-          var(--primary) 5px,
-          var(--primary) 10px
+    45deg,
+    var(--secondary),
+    var(--secondary) 5px,
+    var(--primary) 5px,
+    var(--primary) 10px
   );
 }
 
