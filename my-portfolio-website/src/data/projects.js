@@ -2,11 +2,22 @@ import {
   betterFocus,
   codes_practiceDP,
   flowerDP,
-  gridcoinDP, iremember, khanakhazana,
-  knowledge_representationDP, lesgoCred, listenbrainz_androidDP,
-  loanerDP, moviedroidDP,
-  my_webDP, prastuti,
-  qnaDP, reciboi, sampoornaDP, studyAdda, w3smartwallet, yada
+  gridcoinDP,
+  iremember,
+  khanakhazana,
+  knowledge_representationDP,
+  lesgoCred,
+  listenbrainz_androidDP,
+  nginx_webDP,
+  moviedroidDP,
+  my_webDP,
+  prastuti,
+  qnaDP,
+  reciboi,
+  sampoornaDP,
+  studyAdda,
+  w3smartwallet,
+  yada,
 } from "../assets";
 
 export const projects = [
@@ -15,45 +26,45 @@ export const projects = [
     data: [
       {
         name: "Codes Practice",
-        link: 'https://codes-practice.vercel.app/',
-        img: codes_practiceDP
-      },
-      {
-        name: "Knowledge Representation",
-        link: "https://knowledge-representation.vercel.app/",
-        img: knowledge_representationDP
+        link: "https://codes-practice.vercel.app/",
+        img: codes_practiceDP,
       },
       {
         name: "Khana Khazana",
         link: "https://khanakhazana.vercel.app/",
-        img: khanakhazana
+        img: khanakhazana,
       },
       {
         name: "Prastuti.ai",
         link: "https://prastuti-ai.vercel.app/",
-        img: prastuti
+        img: prastuti,
+      },
+      {
+        name: "Nginx-Web",
+        link: "https://github.com/yellowHatpro/nginx-web",
+        img: nginx_webDP,
       },
       {
         name: "qna",
         link: "https://github.com/yellowHatpro/qna",
-        img: qnaDP
+        img: qnaDP,
       },
       {
         name: "Study Adda",
-        link:"https://studyadda.vercel.app/",
-        img: studyAdda
+        link: "https://studyadda.vercel.app/",
+        img: studyAdda,
       },
       {
         name: "My Web",
         link: "https://yellowhatpro.github.io/My-web/",
-        img: my_webDP
+        img: my_webDP,
       },
       {
-        name: "Loaner",
-        link: "https://github.com/yellowHatpro/loaner",
-        img: loanerDP
+        name: "Knowledge Representation",
+        link: "https://knowledge-representation.vercel.app/",
+        img: knowledge_representationDP,
       },
-      ],
+    ],
   },
   {
     type: "blockchain",
@@ -61,19 +72,19 @@ export const projects = [
       {
         name: "Flower",
         link: "https://github.com/yellowHatpro/flower",
-        img: flowerDP
+        img: flowerDP,
       },
       {
         name: "GridCoin",
         link: "https://github.com/yellowHatpro/gridcoin",
-        img: gridcoinDP
+        img: gridcoinDP,
       },
       {
         name: "w3 Smart Wallet",
         link: "https://w3-smart-wallet.vercel.app/",
-        img: w3smartwallet
-      }
-    ]
+        img: w3smartwallet,
+      },
+    ],
   },
   {
     type: "android",
@@ -81,39 +92,39 @@ export const projects = [
       {
         name: "Listenbrainz",
         link: "https://github.com/yellowHatpro/listenbrainz-android",
-        img: listenbrainz_androidDP
+        img: listenbrainz_androidDP,
       },
       {
         name: "Sampoorna",
         link: "https://github.com/yellowHatpro/sampoorna",
-        img: sampoornaDP
+        img: sampoornaDP,
       },
       {
         name: "MovieDroid",
         link: "https://github.com/yellowHatpro/MovieDroid",
-        img: moviedroidDP
+        img: moviedroidDP,
       },
       {
         name: "LesgoCred",
         link: "https://github.com/yellowHatpro/LesgoCRED",
-        img: lesgoCred
+        img: lesgoCred,
       },
       {
         name: "YADA",
         link: "https://github.com/yellowHatpro/YADA",
-        img: yada
+        img: yada,
       },
       {
         name: "Better Focus",
         link: "https://github.com/yellowHatpro/Better-Focus",
-        img: betterFocus
+        img: betterFocus,
       },
       {
         name: "ReciBoi",
         link: "https://github.com/yellowHatpro/ReciBoi",
-        img: reciboi
-      }
-    ]
+        img: reciboi,
+      },
+    ],
   },
   {
     type: "rust",
@@ -121,8 +132,13 @@ export const projects = [
       {
         name: "i-remember",
         link: "https://github.com/yellowHatpro/i-remember",
-        img: iremember
-      }
-    ]
-  }
-]
+        img: iremember,
+      },
+      {
+        name: "Melba",
+        link: "https://github.com/metabrainz/melba",
+        img: "https://blog.metabrainz.org/wp-content/uploads/2024/10/image.png",
+      },
+    ],
+  },
+];
