@@ -1,9 +1,5 @@
 import { Button } from "../components";
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiOutlineX } from "react-icons/ai";
 import { BsDiscord } from "react-icons/bs";
 
 export const ConnectMe = () => (
@@ -15,13 +11,9 @@ export const ConnectMe = () => (
   >
     <div className={"text-6xl font-bold "}>LETS CONNECT</div>
     <div className={"flex flex-row child:text-4xl child:m-2"}>
-      <a
-        target={"_blank"}
-        href={"https://twitter.com/yellowhatpro"}
-        rel="noreferrer"
-      >
+      <a target={"_blank"} href={"https://x.com/yellowhatpro"} rel="noreferrer">
         {" "}
-        <AiFillTwitterCircle />
+        <AiOutlineX />
       </a>
       <a
         target={"_blank"}

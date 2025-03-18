@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
             </a>
           </div>
           <div onClick={() => handleScrollToSection("connect")}>
-            <h1>LET&apos;S CONNECT</h1>
+            <h1>CONNECT?</h1>
           </div>
         </div>
       </div>
