@@ -31,11 +31,19 @@ const Layout = ({ children }) => {
             "child:px-4 flex flex-row child-hover:underline child-hover:animate-bounce"
           }
         >
+          <div onClick={() => handleScrollToSection("about")}>
+            <h1>BLOGS</h1>
+          </div>
           <div onClick={() => handleScrollToSection("projects")}>
             <h1>PROJECTS</h1>
           </div>
           <div onClick={() => handleScrollToSection("education")}>
             <h1>EDUCATION</h1>
+          </div>
+          <div>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <h1>RESUME</h1>
+            </a>
           </div>
           <div onClick={() => handleScrollToSection("connect")}>
             <h1>LET&apos;S CONNECT</h1>
