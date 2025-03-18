@@ -60,39 +60,58 @@ export const About = () => {
 
   const getSpecsStyle = () => {
     // Calculate position based on scroll progress
-    // 0 = at pocket (bottom)
-    // 1 = at eyes (top)
+    // 1 = at pocket (bottom)
+    // 0 = at eyes (top)
 
-    // Pocket position (starting point)
-    const pocketTop = "calc(70% - 0.625rem)";
-    const pocketLeft = "calc(50% + 1.25rem)";
-    const pocketRotation = 45; // Tilted
+    // Get screen width for responsive positioning
+    const screenWidth = window.innerWidth;
 
-    // Eyes position (ending point)
-    const eyesTop = "calc(30% - 4rem)";
-    const eyesLeft = "calc(53% - 1rem)";
+    // Define positions based on screen size
+    let eyesTop, eyesLeft, pocketTop, pocketLeft;
 
-    // Interpolate between pocket and eyes based on progress
-    const currentRotation = pocketRotation * (1.6 - scrollProgress);
+    if (screenWidth < 720) {
+      // sm and smaller
+      eyesTop = "calc(30% - 2rem)";
+      eyesLeft = "calc(53% + 2.5rem)";
+      pocketTop = "calc(70% - 1.5rem)";
+      pocketLeft = "calc(50% + 2rem)";
+    } else if (screenWidth < 1000) {
+      // md
+      eyesTop = "calc(30% - 3rem)";
+      eyesLeft = "calc(53% + 1rem)";
+      pocketTop = "calc(70% - 1.75rem)";
+      pocketLeft = "calc(50% + 1.1rem)";
+    } else {
+      // lg
+      eyesTop = "calc(30% - 3rem)";
+      eyesLeft = "calc(53% - 0.7rem)";
+      pocketTop = "calc(70% - 2rem)";
+      pocketLeft = "calc(50% + 1.25rem)";
+    }
+
+    const eyesRotation = 30; // Slight tilt at eyes
+    const pocketRotation = 90; // Vertical position
+
+    // Interpolate between eyes (30 degrees) and pocket (90 degrees) based on progress
+    const currentRotation =
+      eyesRotation + (pocketRotation - eyesRotation) * scrollProgress;
 
     //Responsive horizontal position that works on all screen sizes
     const leftPosition =
       scrollProgress === 1
-        ? eyesLeft
-        : scrollProgress === 0
         ? pocketLeft
-        : `calc(${pocketLeft} - ${
-            scrollProgress * (window.innerWidth < 640 ? 2.5 : 1.25)
-          }rem)`;
+        : scrollProgress === 0
+        ? eyesLeft
+        : `calc(${eyesLeft} + ${scrollProgress * 2.5}rem)`;
 
     return {
       transform: `rotate(${currentRotation}deg)`,
       top:
         scrollProgress === 1
-          ? eyesTop
-          : scrollProgress === 0
           ? pocketTop
-          : `calc(${pocketTop} - ${scrollProgress * 40}%)`,
+          : scrollProgress === 0
+          ? eyesTop
+          : `calc(${eyesTop} + ${scrollProgress * 40}%)`,
       left: leftPosition,
       transition: "all 0.2s ease-out",
     };
@@ -153,7 +172,7 @@ export const About = () => {
             >
               <img
                 className={
-                  "sm:w-[6.25rem] sm:h-[6.25rem] md:w-[7.5rem] md:h-[7.5rem] lg:w-[9.375rem] lg:h-[9.375rem]"
+                  "sm:w-[6.25rem] sm:h-[6.25rem] md:w-[7.5rem] md:h-[7.5rem] lg:w-[8.75rem] lg:h-[8.75rem]"
                 }
                 src={chasma}
                 alt={"chasma"}
