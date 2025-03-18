@@ -24,15 +24,25 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className={"bg-yellow-400 flex flex-row justify-between py-4 px-8 "}>
+      <div
+        className={
+          "bg-yellow-400 flex flex-row w-full justify-between py-4 px-8 "
+        }
+      >
         <h1 className={"font-extralight text-2xl"}>yellowhatpro</h1>
         <div
           className={
             "child:px-4 flex flex-row child-hover:underline child-hover:animate-bounce"
           }
         >
-          <div onClick={() => handleScrollToSection("about")}>
-            <h1>BLOGS</h1>
+          <div>
+            <a
+              href="https://hashnode.yellowhatpro.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h1>BLOGS</h1>
+            </a>
           </div>
           <div onClick={() => handleScrollToSection("projects")}>
             <h1>PROJECTS</h1>
