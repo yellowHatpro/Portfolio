@@ -119,7 +119,7 @@ export const About = () => {
 
   return (
     <div ref={aboutRef}>
-      <div className={"bg-yellow-400 p-8"}>
+      <div className={"bg-[#fbf1c7] p-8"}>
         <div
           className={
             "flex sm:flex-col md-flex-row lg:flex-row justify-center items-center"
@@ -156,7 +156,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <div className={"bg-yellow-400 relative"}>
+      <div className={"bg-[#fbf1c7] relative"}>
         <div className="relative flex justify-center items-center px-4 pt-4">
           <img
             ref={imageRef}
@@ -183,7 +183,7 @@ export const About = () => {
       </div>
       <div
         className={
-          "flex text-4xl bg-black text-yellow-300 p-8 font-bold justify-center items-center"
+          "flex text-4xl bg-black text-[#f2e5bc] p-8 font-bold justify-center items-center"
         }
       >
         YELLOWHATPRO ✨ OPEN FOR COLLABORATION

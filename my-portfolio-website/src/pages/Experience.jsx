@@ -3,11 +3,11 @@ import { ExperienceAccordian } from "../components";
 
 export const Experience = () => (
   <div className={"bg-neutral-900  p-8"}>
-    <div className={"min-w-full text-yellow-300"}>
+    <div className={"min-w-full text-[#f2e5bc]"}>
       <div className={"flex flex-row sm:flex-col lg:flex-row justify-evenly"}>
         <div>
           <div className={"flex flex-row text-7xl font-black text-neutral-300"}>
-            EXPERIENCES <div className={"text-yellow-300"}>.</div>
+            EXPERIENCES <div className={"text-[#f2e5bc]"}>.</div>
           </div>
           <div className={"text-gray-400"}>
             There is a reason why I say I am a god knows what stack developer

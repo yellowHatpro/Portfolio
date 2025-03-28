@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
     <>
       <div
         className={
-          "bg-yellow-400 flex flex-row w-full justify-between py-4 px-8 "
+          "bg-[#fbf1c7] flex flex-row w-full justify-between py-4 px-8 "
         }
       >
         <h1 className={"font-extralight text-2xl"}>yellowhatpro</h1>
@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
       {showButton && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className={"sticky float-right bg-yellow-50 bottom-0 p-2"}
+          className={"sticky float-right bg-[#f2e5bc] bottom-0 p-2"}
         >
           <BiSolidUpArrow />
         </button>

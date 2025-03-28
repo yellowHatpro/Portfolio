@@ -17,7 +17,7 @@ const ExperienceAccordian = () => {
             </div>
             <div
               className={
-                "max-h-0 group-hover:bg-yellow-300 transition-all duration-500 group-hover:text-black flex flex-row justify-center items-center "
+                "max-h-0 group-hover:bg-[#fbf1c7] transition-all duration-500 group-hover:text-black flex flex-row justify-center items-center "
               }
             >
               {openIndex === i ? (

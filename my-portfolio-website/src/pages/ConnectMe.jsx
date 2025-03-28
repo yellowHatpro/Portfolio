@@ -6,7 +6,7 @@ export const ConnectMe = () => (
   <div
     id={"connect"}
     className={
-      "flex flex-col items-center justify-center text-center bg-yellow-400 rounded-b-[40px] mx-8 p-24"
+      "flex flex-col items-center justify-center text-center bg-[#fbf1c7] rounded-b-[40px] mx-8 p-24"
     }
   >
     <div className={"text-6xl font-bold "}>LETS CONNECT</div>
