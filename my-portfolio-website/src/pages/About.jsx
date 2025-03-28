@@ -122,10 +122,14 @@ export const About = () => {
       <div className={"bg-[#fbf1c7] p-4 sm:p-6 md:p-8"}>
         <div
           className={
-            "flex flex-col sm:flex-col md:flex-row lg:flex-row justify-center items-center"
+            "flex flex-col sm:flex-col md:flex-col lg:flex-row justify-center items-center"
           }
         >
-          <div className={"flex flex-col max-w-full text-center md:text-left"}>
+          <div
+            className={
+              "flex flex-col max-w-full text-center md:text-center lg:text-left"
+            }
+          >
             <div>
               <h1
                 className={
@@ -138,7 +142,7 @@ export const About = () => {
             </div>
             <div
               className={
-                "flex flex-col sm:flex-col md:flex-row w-full items-center justify-center gap-4"
+                "flex flex-col sm:flex-col md:flex-col lg:flex-row w-full items-center justify-center gap-4"
               }
             >
               <Button>🌐 Full Stack Developer</Button>
