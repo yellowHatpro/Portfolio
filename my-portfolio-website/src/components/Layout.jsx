@@ -23,16 +23,18 @@ const Layout = ({ children }) => {
     });
 
   return (
-    <>
+    <div className="max-w-full overflow-x-hidden">
       <div
         className={
-          "bg-[#fbf1c7] flex flex-row w-full justify-between py-4 px-8 "
+          "bg-[#fbf1c7] flex flex-col sm:flex-col md:flex-row w-full justify-between py-4 px-4 sm:px-6 md:px-8 sm:items-center mx-auto"
         }
       >
-        <h1 className={"font-extralight text-2xl"}>yellowhatpro</h1>
+        <h1 className={"font-extralight text-2xl mb-2 md:mb-0"}>
+          yellowhatpro
+        </h1>
         <div
           className={
-            "child:px-4 flex flex-row child-hover:underline child-hover:animate-bounce"
+            "child:px-2 md:child:px-4 flex flex-row sm:flex-row flex-wrap justify-center md:flex-row child-hover:underline child-hover:animate-bounce"
           }
         >
           <div>
@@ -60,7 +62,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </div>
-      {children}
+      <div className="max-w-full">{children}</div>
       {showButton && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -69,7 +71,7 @@ const Layout = ({ children }) => {
           <BiSolidUpArrow />
         </button>
       )}{" "}
-    </>
+    </div>
   );
 };
 export default Layout;

@@ -6,14 +6,22 @@ export const ConnectMe = () => (
   <div
     id={"connect"}
     className={
-      "flex flex-col items-center justify-center text-center bg-[#fbf1c7] rounded-b-[40px] mx-8 p-24"
+      "flex flex-col items-center justify-center text-center bg-[#fbf1c7] rounded-b-[40px] mx-2 sm:mx-4 md:mx-8 p-6 sm:p-12 md:p-16 lg:p-24 max-w-full overflow-x-hidden"
     }
   >
-    <div className={"text-6xl font-bold "}>LETS CONNECT</div>
-    <div className={"flex flex-row child:text-4xl child:m-2"}>
+    <div
+      className={"text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"}
+    >
+      LETS CONNECT
+    </div>
+    <div
+      className={
+        "flex flex-row child:text-2xl sm:child:text-3xl md:child:text-4xl child:m-2 sm:child:m-3 md:child:m-4 mb-4 sm:mb-6"
+      }
+    >
       <a target={"_blank"} href={"https://x.com/yellowhatpro"} rel="noreferrer">
         {" "}
-        <AiOutlineX />
+        <AiOutlineX className="hover:scale-110 transition-transform" />
       </a>
       <a
         target={"_blank"}
@@ -21,7 +29,7 @@ export const ConnectMe = () => (
         rel="noreferrer"
       >
         {" "}
-        <AiFillLinkedin />
+        <AiFillLinkedin className="hover:scale-110 transition-transform" />
       </a>
       <a
         target={"_blank"}
@@ -29,17 +37,21 @@ export const ConnectMe = () => (
         rel="noreferrer"
       >
         {" "}
-        <BsDiscord />
+        <BsDiscord className="hover:scale-110 transition-transform" />
       </a>
       <a
         target={"_blank"}
         href={"https://github.com/yellowHatpro"}
         rel="noreferrer"
       >
-        <AiFillGithub />
+        <AiFillGithub className="hover:scale-110 transition-transform" />
       </a>
     </div>
-    <div className={"flex flex-row justify-center items-center child:m-2"}>
+    <div
+      className={
+        "flex flex-row flex-wrap justify-center items-center child:m-2 gap-2 sm:gap-3"
+      }
+    >
       <a
         target={"_blank"}
         href={"https://linktr.ee/yellowhatpro"}

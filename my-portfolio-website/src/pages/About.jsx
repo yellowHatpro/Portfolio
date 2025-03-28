@@ -118,29 +118,47 @@ export const About = () => {
   };
 
   return (
-    <div ref={aboutRef}>
-      <div className={"bg-[#fbf1c7] p-8"}>
+    <div ref={aboutRef} className="max-w-full overflow-x-hidden">
+      <div className={"bg-[#fbf1c7] p-4 sm:p-6 md:p-8"}>
         <div
           className={
-            "flex sm:flex-col md-flex-row lg:flex-row justify-center items-center"
+            "flex flex-col sm:flex-col md:flex-row lg:flex-row justify-center items-center"
           }
         >
-          <div className={"flex flex-col"}>
+          <div className={"flex flex-col max-w-full"}>
             <div>
-              <h1 className={"font-black text-8xl"}>
+              <h1
+                className={
+                  "font-black text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-wrap"
+                }
+              >
                 GOD KNOWS WHAT <br />
                 STACK DEVELOPER
               </h1>
             </div>
-            <div className={"flex sm:flex-col md:flex-row child:m-2"}>
+            <div
+              className={
+                "flex flex-col sm:flex-col md:flex-row child:m-2 w-full"
+              }
+            >
               <Button>🤖 Android Developer</Button>
               <Button>🌐 Web Developer</Button>
               <Button>🐧 Open Source Fanboi</Button>
             </div>
           </div>
           <div className={"flex flex-col p-2 items-center"}>
-            <h1 className={"text-8xl p-8"}>(≧∇≦)/</h1>
-            <h1 className={"text-lg font-light text-justify p-4"}>
+            <h1
+              className={
+                "text-4xl sm:text-6xl md:text-7xl lg:text-8xl p-4 sm:p-6 md:p-8"
+              }
+            >
+              (≧∇≦)/
+            </h1>
+            <h1
+              className={
+                "text-base sm:text-lg font-light text-justify p-2 sm:p-4"
+              }
+            >
               Hello everyone, I am Ashutosh Aswal, aka yellowhatpro. A BTech CSE
               graduate from PEC, Chandigarh.
               <br /> Experienced android developer, well versed with web
@@ -160,7 +178,9 @@ export const About = () => {
         <div className="relative flex justify-center items-center px-4 pt-4">
           <img
             ref={imageRef}
-            className={"h-[560px] w-auto rounded-t-[40px]"}
+            className={
+              "h-auto max-h-[560px] w-auto max-w-full rounded-t-[40px]"
+            }
             src={yellowhatproDP}
             alt={"yellowhatpro"}
           />
@@ -183,7 +203,7 @@ export const About = () => {
       </div>
       <div
         className={
-          "flex text-4xl bg-black text-[#f2e5bc] p-8 font-bold justify-center items-center"
+          "flex text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-black text-[#f2e5bc] p-4 sm:p-6 md:p-8 font-bold justify-center items-center text-center"
         }
       >
         YELLOWHATPRO ✨ OPEN FOR COLLABORATION
