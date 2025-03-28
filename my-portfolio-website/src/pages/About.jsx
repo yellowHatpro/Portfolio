@@ -72,7 +72,7 @@ export const About = () => {
     if (screenWidth < 720) {
       // sm and smaller
       eyesTop = "calc(30% - 2rem)";
-      eyesLeft = "calc(53% + 2.5rem)";
+      eyesLeft = "calc(53% + 2.2rem)";
       pocketTop = "calc(70% - 1.5rem)";
       pocketLeft = "calc(50% + 2rem)";
     } else if (screenWidth < 1000) {
