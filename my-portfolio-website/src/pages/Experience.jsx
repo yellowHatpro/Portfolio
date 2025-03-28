@@ -25,7 +25,7 @@ export const Experience = () => (
         </div>
         <div
           className={
-            "grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4 child:m-2 sm:child:m-3 md:child:m-4 child:border-gray-500 child:text-gray-500 child:text-xs sm:child:text-sm child-hover:text-neutral-300 child-hover:border-neutral-300 mt-4 lg:mt-0"
+            "grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4 child:m-2 sm:child:m-3 md:child:m-4 child:border-gray-500 child:text-gray-500 child:text-xs sm:child:text-sm child-hover:text-neutral-300 child-hover:border-neutral-300 mt-4 lg:mt-0 place-items-center"
           }
         >
           <Button>🌐 Android Development</Button>

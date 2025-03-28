@@ -13,7 +13,7 @@ export const Education = () => (
       >
         EDUCATION: B TECH CSE, PEC CHD
       </h1>
-      <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-wrap">
+      <div className="text-lg sm:text-xl md:text-5xl lg:text-5xl text-wrap">
         FAMILIAR WITH: COMPUTER ARCHITECTURE, COMPUTER NETWORKS, OPERATING
         SYSTEMS, DATA STRUCTURE AND ALGORITHMS, DISTRIBUTED SYSTEMS
       </div>
