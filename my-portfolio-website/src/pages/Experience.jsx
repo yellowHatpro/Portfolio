@@ -1,4 +1,3 @@
-import { Button } from "../components";
 import { ExperienceAccordian } from "../components";
 
 export const Experience = () => (
@@ -20,19 +19,8 @@ export const Experience = () => (
             EXPERIENCE
           </div>
           <div className={"text-gray-400 text-sm sm:text-base mt-2"}>
-            There is a reason why I say I am a god knows what stack developer
+            Experience in working with various tech stacks and languages.
           </div>
-        </div>
-        <div
-          className={
-            "grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4 child:m-2 sm:child:m-3 md:child:m-4 child:border-gray-500 child:text-gray-500 child:text-xs sm:child:text-sm child-hover:text-neutral-300 child-hover:border-neutral-300 mt-4 lg:mt-0 place-items-center"
-          }
-        >
-          <Button>🌐 Android Development</Button>
-          <Button>🌐 Web Development</Button>
-          <Button>🌐 Design</Button>
-          <Button>🌐 Blockchain</Button>
-          <Button>🌐 Rust</Button>
         </div>
       </div>
       <div

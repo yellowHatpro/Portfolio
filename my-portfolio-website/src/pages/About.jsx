@@ -146,7 +146,7 @@ export const About = () => {
               }
             >
               <Button>🌐 Full Stack Developer</Button>
-              <Button>🤖 Android Developer</Button>
+              <Button>🤖 Android Lunatic</Button>
               <Button>🐧 Open Source Fanboi</Button>
             </div>
           </div>
@@ -163,14 +163,15 @@ export const About = () => {
                 "text-base sm:text-lg font-light text-justify p-2 sm:p-4"
               }
             >
-              Hello everyone, I am Ashutosh Aswal, aka yellowhatpro. A BTech CSE
-              graduate from PEC, Chandigarh.
-              <br /> Experienced android developer, well versed with web
-              technologies. I am interested in open source, anime, computer
-              science fundamentals, including Data Structures, Computer
-              Networks, Operating Systems, Computer Architecture etc. I love
-              ricing my arch configs and exploring new tech fields, programming
-              languages, and frameworks.
+              Hello everyone, I am Ashutosh Aswal, aka yellowhatpro.
+              <br /> Experienced Backend Developer, well versed with frontend
+              and android technologies. I take great interest in open source
+              projects, anime, computer science fundamentals, including Data
+              Structures, Computer Networks, Operating Systems, Computer
+              Architecture etc. In my free time, I spend time ricing my arch
+              configs, or flashing custom ROMs on my smartphone and modding it.
+              I love exploring new tech fields, programming languages, and
+              frameworks.
               <br />
               <div className={"font-bold"}>DTC (Down To Code),</div>
               probably coding while you are reading this.

@@ -19,15 +19,19 @@ export const Projects = () => {
             "flex flex-row text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-neutral-300 flex-wrap justify-center md:justify-start"
           }
         >
-          BEST PROJECTS.
+          PROJECTS.
         </div>
         <div
           className={
             "text-neutral-400 font-light my-2 sm:m-4 text-justify text-sm sm:text-base md:text-lg"
           }
         >
-          {"Experienced in building different apps of different kinds. Worked on multiple personal and open source projects, enjoying my time building stuff.\n" +
-            'Here are "some" of my personal and open source projects I have worked on. Do visit my github profile for more 😋.'}
+          Experienced in building different apps of different kinds. Worked on
+          multiple personal and open source projects, enjoying my time building
+          stuff. Do visit my github profile for more 😋. <br /> P.S. I am mostly
+          busy working on private projects and open source projects, and testing
+          and reading stuff. I am terrible at deploying my projects, so you
+          might not be able to see them live. I know, I am lazy.
         </div>
       </div>
       <div className="mt-4 md:mt-6 flex justify-center">
@@ -84,6 +88,7 @@ export const Projects = () => {
                   dp={project.img}
                   link={project.link}
                   title={project.name}
+                  about={project.about}
                 />
               </div>
             ))
