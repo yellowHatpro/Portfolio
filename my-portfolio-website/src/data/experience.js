@@ -3,6 +3,7 @@ export const experienceContent = [
     title: "Wuri AI (YC W24) | Founding Software Engineer",
     content:
       "Solely led the product's backend, which consists of AI pipelines for text, image, audio, and video generation, handling 3000+ daily video generation requests.\n" +
+      "Tinkered with LLMs, TTS and image generation models to enhance the product's capabilities.\n" +
       "Architectured RabbitMQ to offload CPU-intensive FFMPEG tasks on a different consumer.\n" +
       "Collaborated on the front-end side, integrating blogs, Discord auth, Remotion player, and other functionalities.\n" +
       "Technologies used: FastAPI, Python, AWS, Firebase, Next.js, RabbitMQ, FFMPEG",
