@@ -1,5 +1,19 @@
 export const experienceContent = [
   {
+    title: "Amazon | Software Development Engineer 1",
+    content:
+      "Working in the Amazon Devices team, I focus on OS-level and platform support to ensure seamless compatibility and performance of React Native applications on Amazon's custom hardware and software stacks. I bridge the gap between low-level system components and high-level app frameworks, enabling React Native developers to build and deploy reliably on Amazon devices.\n" +
+      "Technologies used: C++, JavaScript",
+    link: "https://www.amazon.com/",
+  },
+  {
+    title: "TaskSavvy AI | Full Stack Developer",
+    content:
+      "Built the MVP as the primary engineering contributor, handling both frontend and backend development. Integrated LLMs and browser automation to enable AI-driven task management. Collaborated with a product consultant during the early development phase.\n" +
+      "Technologies used: Python, Django, Next.js, PostgreSQL, TypeScript, AWS, Playwright",
+    link: "https://www.tryingrow.com/",
+  },
+  {
     title: "Wuri AI (YC W24) | Founding Software Engineer",
     content:
       "Solely led the product's backend, which consists of AI pipelines for text, image, audio, and video generation, handling 3000+ daily video generation requests.\n" +
