@@ -1,6 +1,13 @@
 import { chasma, yellowhatproDP } from "../assets";
 import { Button } from "../components";
 import { useEffect, useState, useRef } from "react";
+import {
+  SiGooglesummerofcode,
+  SiGooglesummerofcodeHex,
+  SiYcombinator,
+  SiYcombinatorHex,
+} from "@icons-pack/react-simple-icons";
+import { AiFillAmazonCircle } from "react-icons/ai";
 
 export const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -148,10 +155,41 @@ export const About = () => {
                 "flex flex-col sm:flex-col md:flex-col lg:flex-row w-full items-center justify-center gap-4"
               }
             >
-              <Button>🌐 Full Stack Developer</Button>
-              <Button>🤖 Android Lunatic</Button>
-              <Button>🐧 Open Source Fanboi</Button>
+              <Button>
+                <span className="flex items-center justify-center gap-2">
+                  <AiFillAmazonCircle
+                    size={26}
+                    color="#FF9900"
+                    title="Amazon"
+                    aria-hidden="true"
+                  />
+                  <span>SDE @ Amazon Device OS</span>
+                </span>
+              </Button>
+              <Button>
+                <span className="flex items-center justify-center gap-2">
+                  <SiYcombinator
+                    size={26}
+                    color={SiYcombinatorHex}
+                    title="Y Combinator"
+                    aria-hidden="true"
+                  />
+                  <span>Ex YC W24 @ Wuri AI</span>
+                </span>
+              </Button>
+              <Button>
+                <span className="flex items-center justify-center gap-2">
+                  <SiGooglesummerofcode
+                    size={24}
+                    color={SiGooglesummerofcodeHex}
+                    title="Google Summer of Code"
+                    aria-hidden="true"
+                  />
+                  <span>2x GSoC @ MetaBrainz</span>
+                </span>
+              </Button>
             </div>
+
           </div>
           <div className={"flex flex-col p-2 items-center"}>
             <h1
@@ -190,9 +228,8 @@ export const About = () => {
           {profileImageStatus !== "failed" && (
             <img
               ref={imageRef}
-              className={`h-auto max-h-[560px] w-auto max-w-full rounded-t-[40px] transition-opacity duration-200 ${
-                profileImageStatus === "loaded" ? "opacity-100" : "opacity-0"
-              }`}
+              className={`h-auto max-h-[560px] w-auto max-w-full rounded-t-[40px] transition-opacity duration-200 ${profileImageStatus === "loaded" ? "opacity-100" : "opacity-0"
+                }`}
               src={yellowhatproDP}
               alt={"yellowhatpro"}
               decoding="async"
@@ -203,19 +240,19 @@ export const About = () => {
           {shouldShowAnimation &&
             specAnchors &&
             profileImageStatus === "loaded" && (
-            <div
-              style={getSpecsStyle()}
-              className={"absolute z-10 pointer-events-none"}
-            >
-              <img
-                className={
-                  "sm:w-[6.25rem] sm:h-[6.25rem] md:w-[7.5rem] md:h-[7.5rem] lg:w-[8.75rem] lg:h-[8.75rem]"
-                }
-                src={chasma}
-                alt={"chasma"}
-              />
-            </div>
-          )}
+              <div
+                style={getSpecsStyle()}
+                className={"absolute z-10 pointer-events-none"}
+              >
+                <img
+                  className={
+                    "sm:w-[6.25rem] sm:h-[6.25rem] md:w-[7.5rem] md:h-[7.5rem] lg:w-[8.75rem] lg:h-[8.75rem]"
+                  }
+                  src={chasma}
+                  alt={"chasma"}
+                />
+              </div>
+            )}
         </div>
       </div>
       <div
