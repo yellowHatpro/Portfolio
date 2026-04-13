@@ -5,18 +5,20 @@ import { useEffect, useState, useRef } from "react";
 export const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [shouldShowAnimation, setShouldShowAnimation] = useState(true);
+  const [specAnchors, setSpecAnchors] = useState(null);
   const aboutRef = useRef(null);
+  const imageWrapperRef = useRef(null);
   const imageRef = useRef(null);
 
   useEffect(() => {
+    const clampProgress = (value) => Math.max(0, Math.min(1, value));
+
     const handleScroll = () => {
       if (!imageRef.current) return;
 
-      // Get the image's boundaries
       const imageRect = imageRef.current.getBoundingClientRect();
       const imageTop = imageRect.top;
-      const imageHeight = imageRect.height;
-      const imageBottom = imageTop + imageHeight;
+      const imageBottom = imageRect.bottom;
 
       // Only animate when the image is at least partially visible
       if (imageBottom < 0 || imageTop > window.innerHeight) {
@@ -24,96 +26,92 @@ export const About = () => {
         return;
       }
 
-      // Calculate progress based on image position in viewport
-      // 0 = image just entered viewport from bottom (glasses at pocket)
-      // 1 = image is centered in viewport (glasses on eyes)
-      let progress = 0;
-
-      // Calculate the center point of the viewport
-      const viewportCenter = window.innerHeight / 2;
-
-      // Calculate how far the image center is from viewport center
-      const imageCenterY = imageTop + imageHeight / 2;
-      const distanceFromCenter = viewportCenter - imageCenterY;
-
-      // Normalize to 0-1 range
-      // When image center is at bottom of viewport: progress = 0
-      // When image center is at center of viewport: progress = 1
-      // When image center is at top of viewport: progress = 0
-      progress = Math.max(
-        0,
-        Math.min(1, (distanceFromCenter + imageHeight / 4) / (imageHeight / 2))
-      );
+      // Keep specs on eyes when image is in hero position, then move to pocket while scrolling down.
+      const startY = window.innerHeight * 0.45;
+      const endY = window.innerHeight * 0.05;
+      const progress = clampProgress((startY - imageTop) / (startY - endY));
 
       setScrollProgress(progress);
       setShouldShowAnimation(true);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    // Initial calculation
-    handleScroll();
+    const updateAnchors = () => {
+      if (!imageRef.current || !imageWrapperRef.current) return;
 
+      const imageRect = imageRef.current.getBoundingClientRect();
+      const wrapperRect = imageWrapperRef.current.getBoundingClientRect();
+
+      const imageOffsetX = imageRect.left - wrapperRect.left;
+      const imageOffsetY = imageRect.top - wrapperRect.top;
+
+      // Anchor points are ratios of the profile image, making placement responsive.
+      const eyes = {
+        x: imageOffsetX + imageRect.width * 0.71,
+        y: imageOffsetY + imageRect.height * 0.31,
+      };
+      const pocket = {
+        x: imageOffsetX + imageRect.width * 0.62,
+        y: imageOffsetY + imageRect.height * 0.72,
+      };
+
+      setSpecAnchors({ eyes, pocket });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", updateAnchors);
+    handleScroll();
+    updateAnchors();
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateAnchors();
+      handleScroll();
+    });
+
+    if (imageRef.current) {
+      resizeObserver.observe(imageRef.current);
+    }
+
+    const onImageLoad = () => {
+      updateAnchors();
+      handleScroll();
+    };
+
+    const currentImage = imageRef.current;
+    currentImage?.addEventListener("load", onImageLoad);
+
+    if (currentImage?.complete) {
+      onImageLoad();
+    }
+
+    // Initial calculation
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateAnchors);
+      currentImage?.removeEventListener("load", onImageLoad);
+      resizeObserver.disconnect();
     };
   }, []);
 
   const getSpecsStyle = () => {
-    // Calculate position based on scroll progress
-    // 1 = at pocket (bottom)
-    // 0 = at eyes (top)
-
-    // Get screen width for responsive positioning
-    const screenWidth = window.innerWidth;
-
-    // Define positions based on screen size
-    let eyesTop, eyesLeft, pocketTop, pocketLeft;
-
-    if (screenWidth < 720) {
-      // sm and smaller
-      eyesTop = "calc(30% - 2rem)";
-      eyesLeft = "calc(53% + 2rem)";
-      pocketTop = "calc(70% - 1.5rem)";
-      pocketLeft = "calc(50% + 2rem)";
-    } else if (screenWidth < 1000) {
-      // md
-      eyesTop = "calc(30% - 3rem)";
-      eyesLeft = "calc(53% + 1rem)";
-      pocketTop = "calc(70% - 1.75rem)";
-      pocketLeft = "calc(50% + 1.1rem)";
-    } else {
-      // lg
-      eyesTop = "calc(30% - 3rem)";
-      eyesLeft = "calc(53% - 0.7rem)";
-      pocketTop = "calc(70% - 2rem)";
-      pocketLeft = "calc(50% + 1.25rem)";
+    if (!specAnchors) {
+      return { opacity: 0 };
     }
 
-    const eyesRotation = 30; // Slight tilt at eyes
-    const pocketRotation = 90; // Vertical position
+    const eyesRotation = 20;
+    const pocketRotation = 92;
 
-    // Interpolate between eyes (30 degrees) and pocket (90 degrees) based on progress
     const currentRotation =
       eyesRotation + (pocketRotation - eyesRotation) * scrollProgress;
-
-    //Responsive horizontal position that works on all screen sizes
-    const leftPosition =
-      scrollProgress === 1
-        ? pocketLeft
-        : scrollProgress === 0
-        ? eyesLeft
-        : `calc(${eyesLeft} + ${scrollProgress * 2.5}rem)`;
+    const currentLeft =
+      specAnchors.eyes.x + (specAnchors.pocket.x - specAnchors.eyes.x) * scrollProgress;
+    const currentTop =
+      specAnchors.eyes.y + (specAnchors.pocket.y - specAnchors.eyes.y) * scrollProgress;
 
     return {
-      transform: `rotate(${currentRotation}deg)`,
-      top:
-        scrollProgress === 1
-          ? pocketTop
-          : scrollProgress === 0
-          ? eyesTop
-          : `calc(${eyesTop} + ${scrollProgress * 40}%)`,
-      left: leftPosition,
-      transition: "all 0.2s ease-out",
+      left: `${currentLeft}px`,
+      top: `${currentTop}px`,
+      transform: `translate(-50%, -50%) rotate(${currentRotation}deg)`,
+      transition: "left 0.2s ease-out, top 0.2s ease-out, transform 0.2s ease-out",
     };
   };
 
@@ -180,7 +178,10 @@ export const About = () => {
         </div>
       </div>
       <div className={"bg-[#fbf1c7] relative"}>
-        <div className="relative flex justify-center items-center px-4 pt-4">
+        <div
+          ref={imageWrapperRef}
+          className="relative flex justify-center items-center px-4 pt-4"
+        >
           <img
             ref={imageRef}
             className={
@@ -190,10 +191,10 @@ export const About = () => {
             alt={"yellowhatpro"}
           />
 
-          {shouldShowAnimation && (
+          {shouldShowAnimation && specAnchors && (
             <div
               style={getSpecsStyle()}
-              className={"absolute z-10 transform -translate-x-1/2"}
+              className={"absolute z-10 pointer-events-none"}
             >
               <img
                 className={
