@@ -5,6 +5,8 @@ import { useEffect, useState, useRef } from "react";
 export const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [shouldShowAnimation, setShouldShowAnimation] = useState(true);
+  /** pending: loading; loaded: show portrait + chasma; failed: hide both */
+  const [profileImageStatus, setProfileImageStatus] = useState("pending");
   const [specAnchors, setSpecAnchors] = useState(null);
   const aboutRef = useRef(null);
   const imageWrapperRef = useRef(null);
@@ -72,6 +74,9 @@ export const About = () => {
     }
 
     const onImageLoad = () => {
+      const img = imageRef.current;
+      if (!img || img.naturalWidth === 0) return;
+      setProfileImageStatus("loaded");
       updateAnchors();
       handleScroll();
     };
@@ -79,7 +84,7 @@ export const About = () => {
     const currentImage = imageRef.current;
     currentImage?.addEventListener("load", onImageLoad);
 
-    if (currentImage?.complete) {
+    if (currentImage?.complete && currentImage.naturalWidth > 0) {
       onImageLoad();
     }
 
@@ -182,16 +187,22 @@ export const About = () => {
           ref={imageWrapperRef}
           className="relative flex justify-center items-center px-4 pt-4"
         >
-          <img
-            ref={imageRef}
-            className={
-              "h-auto max-h-[560px] w-auto max-w-full rounded-t-[40px]"
-            }
-            src={yellowhatproDP}
-            alt={"yellowhatpro"}
-          />
+          {profileImageStatus !== "failed" && (
+            <img
+              ref={imageRef}
+              className={`h-auto max-h-[560px] w-auto max-w-full rounded-t-[40px] transition-opacity duration-200 ${
+                profileImageStatus === "loaded" ? "opacity-100" : "opacity-0"
+              }`}
+              src={yellowhatproDP}
+              alt={"yellowhatpro"}
+              decoding="async"
+              onError={() => setProfileImageStatus("failed")}
+            />
+          )}
 
-          {shouldShowAnimation && specAnchors && (
+          {shouldShowAnimation &&
+            specAnchors &&
+            profileImageStatus === "loaded" && (
             <div
               style={getSpecsStyle()}
               className={"absolute z-10 pointer-events-none"}
